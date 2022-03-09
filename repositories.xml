@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>Thamognya</name>
+    <description lang="en">Thamognya's personal overlay</description>
+    <homepage>https://git.thamognya.com/Thamognya/thamognya-overlay</homepage>
+    <owner type="person">
+      <email>contact@thamognya.com</email>
+      <name>Thamognya Kodi</name>
+    </owner>
+    <source type="git">https://git.thamognya.com/Thamognya/thamognya-overlay.git</source>
+    <feed>https://git.thamognya.com/Thamognya/thamognya-overlay/commits/branch/master</feed>
+  </repo>
+</repositories>
