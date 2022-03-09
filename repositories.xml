@@ -2,7 +2,7 @@
 <!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
 <repositories xmlns="" version="1.0">
   <repo quality="experimental" status="unofficial">
-    <name>Thamognya</name>
+    <name>thamognya-overlay</name>
     <description lang="en">Thamognya's personal overlay</description>
     <homepage>https://git.thamognya.com/Thamognya/thamognya-overlay</homepage>
     <owner type="person">
