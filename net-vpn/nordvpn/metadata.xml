@@ -3,10 +3,10 @@
 <pkgmetadata>
   <maintainer type="project">
     <email>contact@thamognya.com</email>
-    <name>Apple Firmware</name>
+    <name>NordVpn</name>
   </maintainer>
   <longdescription>
-"Firmware for the Apple Facetime HD Camera"
+    NordVpn app
   </longdescription>
 </pkgmetadata>
 
