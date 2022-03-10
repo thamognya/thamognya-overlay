@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="project">
+    <email>contact@thamognya.com</email>
+    <name>Apple Firmware</name>
+  </maintainer>
+  <longdescription>
+"Firmware for the Apple Facetime HD Camera"
+  </longdescription>
+</pkgmetadata>
+
