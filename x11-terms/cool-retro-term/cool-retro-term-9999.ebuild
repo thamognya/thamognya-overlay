@@ -3,17 +3,12 @@
 
 EAPI=8
 
-inherit qmake-utils xdg-utils
-
-QTW_PN="qmltermwidget"
-QTW_PV="0.2.0"
-QTW_P="${QTW_PN}-${QTW_PV}"
+inherit git-r3 qmake-utils xdg-utils
 
 DESCRIPTION="terminal emulator which mimics the look and feel of the old cathode tube screens"
 HOMEPAGE="https://github.com/Swordfish90/cool-retro-term"
 
-SRC_URI="https://github.com/Swordfish90/cool-retro-term/archive/${PV}.tar.gz -> ${P}.tar.gz
-		https://github.com/Swordfish90/qmltermwidget/archive/${QTW_PV}.tar.gz -> ${QTW_P}.tar.gz"
+EGIT_REPO_URI="https://github.com/Swordfish90/${PN}.git"
 
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
@@ -33,11 +28,6 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	default
-	rmdir ${WORKDIR}/${P}/${QTW_PN}
-	mv "${WORKDIR}/${QTW_P}" ${WORKDIR}/${P}/${QTW_PN}
-	pushd qmltermwidget || die
-	eapply "${FILESDIR}"/qmltermwidget-0.2.0-gcc-10.patch
-	popd || die
 }
 
 src_configure() {
