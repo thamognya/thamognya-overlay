@@ -33,20 +33,20 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	default
-	rmdir ${WORKDIR}/${P}/${QTW_PN}
-	mv "${WORKDIR}/${QTW_P}" ${WORKDIR}/${P}/${QTW_PN}
+	rmdir "${WORKDIR}/${P}/${QTW_PN}" || die
+	mv "${WORKDIR}/${QTW_P}" "${WORKDIR}/${P}/${QTW_PN}" || die
 	pushd qmltermwidget || die
 	eapply "${FILESDIR}"/qmltermwidget-0.2.0-gcc-10.patch
 	popd || die
 }
 
 src_configure() {
-	eqmake5 PREFIX="/usr/bin"
+	eqmake5 PREFIX="${EPREFIX}/usr"
 }
 
 src_install() {
 	emake
-	mv "${WORKDIR}/${P}/${PN}" /usr/bin/${PN}
+	mv "${WORKDIR}/${P}/${PN}" "/usr/bin/${PN}"
 }
 
 pkg_postinst() {
@@ -55,7 +55,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	rm -rf "/usr/bin/${PN}"
+	rm -rf "/usr/bin/${PN}" || die
 	xdg_icon_cache_update
 	xdg_desktop_database_update
 }

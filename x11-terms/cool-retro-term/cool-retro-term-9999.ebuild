@@ -12,7 +12,6 @@ EGIT_REPO_URI="https://github.com/Swordfish90/${PN}.git"
 
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 
 DEPEND="
@@ -31,7 +30,7 @@ src_prepare() {
 }
 
 src_configure() {
-	eqmake5 PREFIX="/usr/bin"
+	eqmake5 PREFIX="${EPREFIX}/usr"
 }
 
 src_install() {
@@ -45,7 +44,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	rm -rf "/usr/bin/${PN}"
+	rm -rf "/usr/bin/${PN}" || die
 	xdg_icon_cache_update
 	xdg_desktop_database_update
 }
