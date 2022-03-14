@@ -35,7 +35,7 @@ src_configure() {
 
 src_install() {
 	emake
-	mv "${WORKDIR}/${P}/${PN}" /usr/bin/${PN}
+	mv "${WORKDIR}/${P}/${PN}" "/usr/bin/${PN}"
 }
 
 pkg_postinst() {
