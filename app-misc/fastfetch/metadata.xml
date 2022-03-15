@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>contact@thamognya.com</email>
+		<name>Thamognya Kodi</name>
+	</maintainer>
+	<longdescription lang="en">
+		fastfetch is a neofetch-like tool for fetching system information and displaying them in a pretty way. 
+		It is written in c to achieve much better performance, in return only Linux and Android are supported. 
+		It also uses mechanisms like multithreading and caching to finish as fast as possible.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">LinusDierheimer/fastfetch</remote-id>
+	</upstream>
+</pkgmetadata>
+
