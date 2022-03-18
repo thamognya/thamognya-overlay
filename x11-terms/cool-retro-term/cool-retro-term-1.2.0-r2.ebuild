@@ -18,7 +18,6 @@ SRC_URI="https://github.com/Swordfish90/cool-retro-term/archive/${PV}.tar.gz -> 
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc64 ~x86"
-IUSE=""
 
 DEPEND="
 	dev-qt/qtdeclarative:5[localstorage]
@@ -45,8 +44,9 @@ src_configure() {
 }
 
 src_install() {
-	emake
-	mv "${WORKDIR}/${P}/${PN}" "/usr/bin/${PN}"
+	emake INSTALL_ROOT="${D}" install
+	einstalldocs
+	doman packaging/debian/cool-retro-term.1
 }
 
 pkg_postinst() {
@@ -55,7 +55,6 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	rm -rf "/usr/bin/${PN}" || die
 	xdg_icon_cache_update
 	xdg_desktop_database_update
 }
