@@ -1,9 +1,9 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-inherit linux-info
+inherit linux-info tmpfiles
 
 DESCRIPTION="SPICE VD Linux Guest Agent"
 HOMEPAGE="https://www.spice-space.org/"
@@ -60,4 +60,8 @@ src_install() {
 
 	newinitd "${FILESDIR}/${PN}.initd-4" "${PN}"
 	newconfd "${FILESDIR}/${PN}.confd-2" "${PN}"
+}
+
+pkg_postinst() {
+	tmpfiles_process spice-vdagentd.conf
 }
