@@ -19,5 +19,5 @@ update-makefile:
 .PHONY: update-metadata
 update-metadata:
 	git add .
-	git commit -m 'auto update: makefile update'
+	git commit -m 'auto update: metadata update'
 	git remote | xargs -L1 git push --all
