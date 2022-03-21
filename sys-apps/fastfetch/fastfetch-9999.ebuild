@@ -11,14 +11,13 @@ if [[ ${PV} == *9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/LinusDierheimer/fastfetch.git"
 else
-	COMMIT="00fdb8a0c40b4894a111d7acf63f30a9a9ebca80"
-	VERSION_REV="00fdb8a"
-	SRC_URI="https://github.com/LinusDierheimer/fastfetch/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
-	S="${WORKDIR}/${PN}-${COMMIT}"
+	SRC_URI="https://github.com/LinusDierheimer/fastfetch/archive/refs/tags/${PV}.tar.gz"
+	KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~x86"
 fi
 
 LICENSE="MIT"
 SLOT="0"
+KEYWORDS="~amd64"
 IUSE="X gnome pci vulkan wayland xcb xfce xrandr"
 
 # note - qa-vdb will always report errors because fastfetch loads the libs dynamically
