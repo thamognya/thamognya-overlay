@@ -20,6 +20,7 @@ This adds the repository.xml to layman.
 - `app-emulation/spice-vdagent`
 - `app-emulation/spice-protocol`
 - `app-misc/yaf`
+- `mail-client/alot`
 
 # Todo
 
