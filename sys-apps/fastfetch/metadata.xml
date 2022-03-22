@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>contact@thamognya.com</email>
+		<name>Thamognya Kodi</name>
+		<description>Primary maintainer</description>
+	</maintainer>
+	<longdescription lang="en">
+		 Like neofetch, but much faster because written in c.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">LinusDierheimer/fastfetch</remote-id>
+	</upstream>
+	<use>
+		<flag name="pci">Enables reading GPU via <pkg>sys-apps/pciutils</pkg></flag>
+		<flag name="vulkan">Enables reading GPU via <pkg>media-libs/vulkan-loader</pkg></flag>
+		<flag name="xfce">Enables support for XFCE config</flag>
+		<flag name="xrandr">Enables support for Xrandr</flag>
+	</use>
+</pkgmetadata>

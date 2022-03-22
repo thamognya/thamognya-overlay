@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>contact@thamognya.com</email>
+		<name>Thamognya Kodi</name>
+		<description>Primary maintainer</description>
+	</maintainer>
+	<longdescription lang="en">
+	</longdescription>
+	<upstream>
+		<remote-id type="github">deepjyoti30/yaf</remote-id>
+	</upstream>
+</pkgmetadata>
