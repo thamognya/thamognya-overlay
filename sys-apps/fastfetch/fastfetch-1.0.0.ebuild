@@ -5,7 +5,7 @@ EAPI=8
 
 inherit cmake
 
-DESCRIPTION="Like neofetch but faster"
+DESCRIPTION="Print a collection of system information in a terminal. Similar to neofetch and inxi."
 HOMEPAGE="https://github.com/LinusDierheimer/fastfetch"
 if [[ ${PV} == *9999 ]]; then
 	inherit git-r3
