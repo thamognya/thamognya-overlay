@@ -3,16 +3,19 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{7,8,9} )
-inherit git-r3 python-any-r1 meson virtualx xdg
+PYTHON_COMPAT=( python3_{8..10} )
+inherit git-r3 meson python-any-r1 virtualx xdg
 
 DESCRIPTION="A lightweight compositor for X11 (previously a compton fork)"
 HOMEPAGE="https://github.com/jonaburg/picom"
 if [[ ${PV} == *9999 ]]; then
 		EGIT_REPO_URI="https://github.com/jonaburg/picom.git"
 else
-        SRC_URI="https://github.com/LinusDierheimer/fastfetch/archive/refs/tags/${PV}.tar.gz"
-        KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~x86"
+		COMMIT="e3c19cd7d1108d114552267f302548c113278d45"
+		VERSION_REV="e3c19cd"
+		SRC_URI="https://github.com/jonaburg/picom/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
+		S="${WORKDIR}/${PN}-${COMMIT}"
+		KEYWORDS="~amd64"
 fi
 
 LICENSE="MPL-2.0 MIT"
@@ -38,13 +41,12 @@ RDEPEND="dev-libs/libev
 	opengl? ( virtual/opengl )
 	pcre? ( dev-libs/libpcre )
 	!x11-misc/compton"
-
 DEPEND="${RDEPEND}
 	x11-base/xorg-proto"
-
 BDEPEND="virtual/pkgconfig
 	doc? ( app-text/asciidoc )
-	test? ( $(python_gen_any_dep 'dev-python/xcffib[${PYTHON_USEDEP}]') )"
+	test? ( $(python_gen_any_dep 'dev-python/xcffib[${PYTHON_USEDEP}]') )
+"
 
 DOCS=( README.md picom.sample.conf )
 
