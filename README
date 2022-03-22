@@ -19,6 +19,7 @@ This adds the repository.xml to layman.
 - `x11-terms/cool-retro-term`
 - `app-emulation/spice-vdagent`
 - `app-emulation/spice-protocol`
+- `app-misc/yaf`
 
 # Todo
 
