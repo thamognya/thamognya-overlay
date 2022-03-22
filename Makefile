@@ -1,3 +1,5 @@
+git-push-to-all := "git remote | xargs -L1 git push --all"
+
 .PHONY: update-overlay
 update-overlay:
 	git add .
