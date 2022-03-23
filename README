@@ -6,11 +6,15 @@ This is my overlay with packages I write and test before making a pr to gentoo/g
 
 ## Installation of overlay 
 
-### adding to layman
+### adding this overlay
 
-`layman -o https://git.thamognya.com/Thamognya/thamognya-overlay/raw/branch/master/repositories.xml -f -a thamognya-overlay`
+#### Eselect
 
-This adds the repository.xml to layman.
+`eselect repository thamognya`
+
+#### Layman
+
+`layman -a thamognya`
 
 ## Safe packages
 

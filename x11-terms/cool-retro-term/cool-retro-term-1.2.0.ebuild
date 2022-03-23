@@ -44,7 +44,8 @@ src_configure() {
 }
 
 src_install() {
-	emake INSTALL_DIR="${D}"
+	emake
+	emake INSTALL_DIR ${PN} ${D}
 	einstalldocs
 	doman packaging/debian/cool-retro-term.1
 }
