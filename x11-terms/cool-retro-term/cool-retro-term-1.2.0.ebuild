@@ -41,23 +41,21 @@ src_prepare() {
 
 src_configure() {
 	eqmake5 PREFIX="${EPREFIX}/usr"
-	eapply "${FILESDIR}"/makefile-install-1.2.0.patch
 }
 
 src_install() {
-	emake
-	emake TRUE-INSTALL-DIR="" true-install
-	einstalldocs
-	doman packaging/debian/cool-retro-term.1
+	emake INSTALL_ROOT="${D}" install
 }
 
 pkg_postinst() {
+	mv /usr/bin/usr/lib64/qt5/* /usr/lib64/qt5
+	mv /usr/bin/usr/share/applications/* /usr/share/applications
+	mv /usr/bin/usr/share/icons/* /usr/share/icons
 	xdg_icon_cache_update
 	xdg_desktop_database_update
 }
 
 pkg_postrm() {
-	emake TRUE-INSTALL-DIR="${D}" true-delete
 	xdg_icon_cache_update
 	xdg_desktop_database_update
 }

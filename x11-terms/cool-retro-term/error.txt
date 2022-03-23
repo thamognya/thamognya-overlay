@@ -1,0 +1,1383 @@
+Calculating dependencies  
+ * IMPORTANT: 4 news items need reading for repository 'gentoo'.
+ * Use eselect news read to view new items.
+
+... done!
+
+>>> Verifying ebuild manifests
+
+>>> Emerging (1 of 1) x11-terms/cool-retro-term-1.2.0::thamognya-overlay
+ * cool-retro-term-1.2.0.tar.gz BLAKE2B SHA512 size ;-) ...              [ ok ]
+ * qmltermwidget-0.2.0.tar.gz BLAKE2B SHA512 size ;-) ...                [ ok ]
+>>> Unpacking source...
+>>> Unpacking cool-retro-term-1.2.0.tar.gz to /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work
+>>> Unpacking qmltermwidget-0.2.0.tar.gz to /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work
+>>> Source unpacked in /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work
+>>> Preparing source in /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0 ...
+/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0
+ * Applying qmltermwidget-0.2.0-gcc-10.patch ...
+ [ ok ]
+/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0
+>>> Source prepared.
+>>> Configuring source in /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0 ...
+ * Running qmake ...
+Info: creating stash file /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/.qmake.stash
+ [ ok ]
+>>> Source configured.
+>>> Compiling source in /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0 ...
+make -j8 
+cd qmltermwidget/ && ( test -e Makefile || /usr/lib64/qt5/bin/qmake -o Makefile /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/qmltermwidget.pro 'QMAKE_AR=x86_64-pc-linux-gnu-ar cqs' QMAKE_CC=x86_64-pc-linux-gnu-gcc QMAKE_LINK_C=x86_64-pc-linux-gnu-gcc QMAKE_LINK_C_SHLIB=x86_64-pc-linux-gnu-gcc QMAKE_CXX=x86_64-pc-linux-gnu-g++ QMAKE_LINK=x86_64-pc-linux-gnu-g++ QMAKE_LINK_SHLIB=x86_64-pc-linux-gnu-g++ QMAKE_OBJCOPY=x86_64-pc-linux-gnu-objcopy QMAKE_RANLIB= QMAKE_STRIP= 'QMAKE_CFLAGS=-march=haswell -O2 -pipe' QMAKE_CFLAGS_RELEASE= QMAKE_CFLAGS_DEBUG= 'QMAKE_CXXFLAGS=-march=haswell -O2 -pipe' QMAKE_CXXFLAGS_RELEASE= QMAKE_CXXFLAGS_DEBUG= 'QMAKE_LFLAGS=-Wl,-O1 -Wl,--as-needed' QMAKE_LFLAGS_RELEASE= QMAKE_LFLAGS_DEBUG= PREFIX=/usr ) && make -f Makefile 
+make[1]: Entering directory '/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget'
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o BlockArray.o lib/BlockArray.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o ColorScheme.o lib/ColorScheme.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o Emulation.o lib/Emulation.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o Filter.o lib/Filter.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o History.o lib/History.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o HistorySearch.o lib/HistorySearch.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o KeyboardTranslator.o lib/KeyboardTranslator.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o konsole_wcwidth.o lib/konsole_wcwidth.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o kprocess.o lib/kprocess.cpp
+[01m[Klib/History.cpp:[m[K In member function ‘[01m[Kvirtual void Konsole::HistoryScrollBuffer::addCells(const Konsole::Character*, int)[m[K’:
+[01m[Klib/History.cpp:316:8:[m[K [01;35m[Kwarning: [m[K‘[01m[KOutputIterator qCopy(InputIterator, InputIterator, OutputIterator) [with InputIterator = const Konsole::Character*; OutputIterator = Konsole::Character*][m[K’ is deprecated: Use std::copy [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  316 |   [01;35m[KqCopy(a,a+count,newLine.begin())[m[K;
+      |   [01;35m[K~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qlist.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qhash.h:46[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QHash:1[m[K,
+                 from [01m[Klib/History.h:26[m[K,
+                 from [01m[Klib/History.cpp:22[m[K:
+[01m[K/usr/include/qt5/QtCore/qalgorithms.h:82:56:[m[K [01;36m[Knote: [m[Kdeclared here
+   82 | QT_DEPRECATED_X("Use std::copy") inline OutputIterator [01;36m[KqCopy[m[K(InputIterator begin, InputIterator end, OutputIterator dest)
+      |                                                        [01;36m[K^~~~~[m[K
+[01m[Klib/History.cpp:[m[K In member function ‘[01m[Kvirtual void Konsole::CompactHistoryScroll::addCells(const Konsole::Character*, int)[m[K’:
+[01m[Klib/History.cpp:732:9:[m[K [01;35m[Kwarning: [m[K‘[01m[KOutputIterator qCopy(InputIterator, InputIterator, OutputIterator) [with InputIterator = const Konsole::Character*; OutputIterator = Konsole::Character*][m[K’ is deprecated: Use std::copy [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  732 |   [01;35m[KqCopy ( a,a+count,newLine.begin() )[m[K;
+      |   [01;35m[K~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qlist.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qhash.h:46[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QHash:1[m[K,
+                 from [01m[Klib/History.h:26[m[K,
+                 from [01m[Klib/History.cpp:22[m[K:
+[01m[K/usr/include/qt5/QtCore/qalgorithms.h:82:56:[m[K [01;36m[Knote: [m[Kdeclared here
+   82 | QT_DEPRECATED_X("Use std::copy") inline OutputIterator [01;36m[KqCopy[m[K(InputIterator begin, InputIterator end, OutputIterator dest)
+      |                                                        [01;36m[K^~~~~[m[K
+[01m[Klib/BlockArray.cpp:[m[K In member function ‘[01m[Kbool Konsole::BlockArray::setHistorySize(size_t)[m[K’:
+[01m[Klib/BlockArray.cpp:233:18:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kint ftruncate(int, __off_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+  233 |         [01;35m[Kftruncate(ion, length*blocksize)[m[K;
+      |         [01;35m[K~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[Klib/ColorScheme.cpp:[m[K In member function ‘[01m[KKonsole::ColorEntry Konsole::ColorScheme::colorEntry(int, uint) const[m[K’:
+[01m[Klib/ColorScheme.cpp:183:15:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid qsrand(uint)[m[K’ is deprecated: use QRandomGenerator instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  183 |         [01;35m[Kqsrand(randomSeed)[m[K;
+      |         [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qchar.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qhash.h:44[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QHash:1[m[K,
+                 from [01m[Klib/ColorScheme.h:26[m[K,
+                 from [01m[Klib/ColorScheme.cpp:23[m[K:
+[01m[K/usr/include/qt5/QtCore/qglobal.h:1273:81:[m[K [01;36m[Knote: [m[Kdeclared here
+ 1273 | RECATED_VERSION_X_5_15("use QRandomGenerator instead") void [01;36m[Kqsrand[m[K(uint seed);
+      |                                                             [01;36m[K^~~~~~[m[K
+
+[01m[Klib/ColorScheme.cpp:185:42:[m[K [01;35m[Kwarning: [m[Kimplicitly-declared ‘[01m[Kconstexpr Konsole::ColorEntry::ColorEntry(const Konsole::ColorEntry&)[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-copy-Wdeprecated-copy]8;;[m[K]
+  185 |     ColorEntry entry = colorTable()[index[01;35m[K][m[K;
+      |                                          [01;35m[K^[m[K
+In file included from [01m[Klib/ColorScheme.h:34[m[K,
+                 from [01m[Klib/ColorScheme.cpp:23[m[K:
+[01m[Klib/CharacterColor.h:84:8:[m[K [01;36m[Knote: [m[Kbecause ‘[01m[KKonsole::ColorEntry[m[K’ has user-provided ‘[01m[Kvoid Konsole::ColorEntry::operator=(const Konsole::ColorEntry&)[m[K’
+   84 |   void [01;36m[Koperator[m[K=(const ColorEntry& rhs)
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[Klib/ColorScheme.cpp:194:47:[m[K [01;35m[Kwarning: [m[K‘[01m[Kint qrand()[m[K’ is deprecated: use QRandomGenerator instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  194 |         int hueDifference = range.hue ? ([01;35m[Kqrand()[m[K % range.hue) - range.hue/2 : 0;
+      |                                          [01;35m[K~~~~~^~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qchar.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qhash.h:44[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QHash:1[m[K,
+                 from [01m[Klib/ColorScheme.h:26[m[K,
+                 from [01m[Klib/ColorScheme.cpp:23[m[K:
+[01m[K/usr/include/qt5/QtCore/qglobal.h:1274:80:[m[K [01;36m[Knote: [m[Kdeclared here
+ 1274 | _DEPRECATED_VERSION_X_5_15("use QRandomGenerator instead") int [01;36m[Kqrand[m[K();
+      |                                                                [01;36m[K^~~~~[m[K
+
+[01m[Klib/ColorScheme.cpp:195:61:[m[K [01;35m[Kwarning: [m[K‘[01m[Kint qrand()[m[K’ is deprecated: use QRandomGenerator instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  195 |         int saturationDifference = range.saturation ? ([01;35m[Kqrand()[m[K % range.saturation) - range.saturation/2 : 0;
+      |                                                        [01;35m[K~~~~~^~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qchar.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qhash.h:44[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QHash:1[m[K,
+                 from [01m[Klib/ColorScheme.h:26[m[K,
+                 from [01m[Klib/ColorScheme.cpp:23[m[K:
+[01m[K/usr/include/qt5/QtCore/qglobal.h:1274:80:[m[K [01;36m[Knote: [m[Kdeclared here
+ 1274 | _DEPRECATED_VERSION_X_5_15("use QRandomGenerator instead") int [01;36m[Kqrand[m[K();
+      |                                                                [01;36m[K^~~~~[m[K
+
+[01m[Klib/ColorScheme.cpp:196:52:[m[K [01;35m[Kwarning: [m[K‘[01m[Kint qrand()[m[K’ is deprecated: use QRandomGenerator instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  196 |         int  valueDifference = range.value ? ([01;35m[Kqrand()[m[K % range.value) - range.value/2 : 0;
+      |                                               [01;35m[K~~~~~^~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qchar.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qhash.h:44[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QHash:1[m[K,
+                 from [01m[Klib/ColorScheme.h:26[m[K,
+                 from [01m[Klib/ColorScheme.cpp:23[m[K:
+[01m[K/usr/include/qt5/QtCore/qglobal.h:1274:80:[m[K [01;36m[Knote: [m[Kdeclared here
+ 1274 | _DEPRECATED_VERSION_X_5_15("use QRandomGenerator instead") int [01;36m[Kqrand[m[K();
+      |                                                                [01;36m[K^~~~~[m[K
+
+[01m[Klib/ColorScheme.cpp:207:12:[m[K [01;35m[Kwarning: [m[Kimplicitly-declared ‘[01m[Kconstexpr Konsole::ColorEntry::ColorEntry(const Konsole::ColorEntry&)[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-copy-Wdeprecated-copy]8;;[m[K]
+  207 |     return [01;35m[Kentry[m[K;
+      |            [01;35m[K^~~~~[m[K
+In file included from [01m[Klib/ColorScheme.h:34[m[K,
+                 from [01m[Klib/ColorScheme.cpp:23[m[K:
+[01m[Klib/CharacterColor.h:84:8:[m[K [01;36m[Knote: [m[Kbecause ‘[01m[KKonsole::ColorEntry[m[K’ has user-provided ‘[01m[Kvoid Konsole::ColorEntry::operator=(const Konsole::ColorEntry&)[m[K’
+   84 |   void [01;36m[Koperator[m[K=(const ColorEntry& rhs)
+      |        [01;36m[K^~~~~~~~[m[K
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o kpty.o lib/kpty.cpp
+[01m[Klib/kprocess.cpp:[m[K In member function ‘[01m[Kint KProcess::pid() const[m[K’:
+[01m[Klib/kprocess.cpp:407:28:[m[K [01;35m[Kwarning: [m[K‘[01m[KQ_PID QProcess::pid() const[m[K’ is deprecated: Use processId() instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  407 |     return (int) QProcess::[01;35m[Kpid[m[K();
+      |                            [01;35m[K^~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/QProcess:1[m[K,
+                 from [01m[Klib/kprocess.h:35[m[K,
+                 from [01m[Klib/kprocess.cpp:30[m[K:
+[01m[K/usr/include/qt5/QtCore/qprocess.h:237:11:[m[K [01;36m[Knote: [m[Kdeclared here
+  237 |     Q_PID [01;36m[Kpid[m[K() const;
+      |           [01;36m[K^~~[m[K
+[01m[Klib/kprocess.cpp:407:31:[m[K [01;35m[Kwarning: [m[K‘[01m[KQ_PID QProcess::pid() const[m[K’ is deprecated: Use processId() instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  407 |     return (int) [01;35m[KQProcess::pid()[m[K;
+      |                  [01;35m[K~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/QProcess:1[m[K,
+                 from [01m[Klib/kprocess.h:35[m[K,
+                 from [01m[Klib/kprocess.cpp:30[m[K:
+[01m[K/usr/include/qt5/QtCore/qprocess.h:237:11:[m[K [01;36m[Knote: [m[Kdeclared here
+  237 |     Q_PID [01;36m[Kpid[m[K() const;
+      |           [01;36m[K^~~[m[K
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o kptydevice.o lib/kptydevice.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o kptyprocess.o lib/kptyprocess.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o ProcessInfo.o lib/ProcessInfo.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o Pty.o lib/Pty.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o Screen.o lib/Screen.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o ScreenWindow.o lib/ScreenWindow.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o Session.o lib/Session.cpp
+[01m[Klib/kpty.cpp:[m[K In member function ‘[01m[Kbool KPty::open()[m[K’:
+[01m[Klib/kpty.cpp:282:40:[m[K [01;35m[Kwarning: [m[K‘[01m[KQString& QString::sprintf(const char*, ...)[m[K’ is deprecated: Use asprintf(), arg() or QTextStream instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  282 |             ptyName = [01;35m[KQString().sprintf("/dev/pty%c%c", *s3, *s4)[m[K.toUtf8();
+      |                       [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qobject.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QObject:1[m[K,
+                 from [01m[Klib/kpty.h:26[m[K,
+                 from [01m[Klib/kpty_p.h:26[m[K,
+                 from [01m[Klib/kpty.cpp:25[m[K:
+[01m[K/usr/include/qt5/QtCore/qstring.h:393:14:[m[K [01;36m[Knote: [m[Kdeclared here
+  393 |     QString &[01;36m[Ksprintf[m[K(const char *format, ...) Q_ATTRIBUTE_FORMAT_PRINTF(2, 3);
+      |              [01;36m[K^~~~~~~[m[K
+[01m[Klib/kpty.cpp:283:43:[m[K [01;35m[Kwarning: [m[K‘[01m[KQString& QString::sprintf(const char*, ...)[m[K’ is deprecated: Use asprintf(), arg() or QTextStream instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  283 |             d->ttyName = [01;35m[KQString().sprintf("/dev/tty%c%c", *s3, *s4)[m[K.toUtf8();
+      |                          [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qobject.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QObject:1[m[K,
+                 from [01m[Klib/kpty.h:26[m[K,
+                 from [01m[Klib/kpty_p.h:26[m[K,
+                 from [01m[Klib/kpty.cpp:25[m[K:
+[01m[K/usr/include/qt5/QtCore/qstring.h:393:14:[m[K [01;36m[Knote: [m[Kdeclared here
+  393 |     QString &[01;36m[Ksprintf[m[K(const char *format, ...) Q_ATTRIBUTE_FORMAT_PRINTF(2, 3);
+      |              [01;36m[K^~~~~~~[m[K
+[01m[Klib/kpty.cpp:334:69:[m[K [01;35m[Kwarning: [m[K‘[01m[KQTextStream& QTextStreamFunctions::endl(QTextStream&)[m[K’ is deprecated: Use Qt::endl [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  334 |       << "\nThis means the communication can be eavesdropped." << [01;35m[Kendl[m[K;
+      |                                                                   [01;35m[K^~~~[m[K
+
+In file included from [01m[K/usr/include/qt5/QtCore/qdebug.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QtDebug:1[m[K,
+                 from [01m[Klib/kpty.cpp:27[m[K:
+[01m[K/usr/include/qt5/QtCore/qtextstream.h:293:75:[m[K [01;36m[Knote: [m[Kdeclared here
+  293 | QT_DEPRECATED_VERSION_X(5, 15, "Use Qt::endl") QTextStream &[01;36m[Kendl[m[K(QTextStream &s);
+      |                                                             [01;36m[K^~~~[m[K
+
+[01m[Klib/kpty.cpp:334:69:[m[K [01;35m[Kwarning: [m[K‘[01m[KQTextStream& QTextStreamFunctions::endl(QTextStream&)[m[K’ is deprecated: Use Qt::endl [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  334 |       << "\nThis means the communication can be eavesdropped." << [01;35m[Kendl[m[K;
+      |                                                                   [01;35m[K^~~~[m[K
+
+In file included from [01m[K/usr/include/qt5/QtCore/qdebug.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QtDebug:1[m[K,
+                 from [01m[Klib/kpty.cpp:27[m[K:
+[01m[K/usr/include/qt5/QtCore/qtextstream.h:293:75:[m[K [01;36m[Knote: [m[Kdeclared here
+  293 | QT_DEPRECATED_VERSION_X(5, 15, "Use Qt::endl") QTextStream &[01;36m[Kendl[m[K(QTextStream &s);
+      |                                                             [01;36m[K^~~~[m[K
+
+In file included from [01m[Klib/Session.cpp:43[m[K:
+[01m[Klib/TerminalDisplay.h:142:5:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+  142 |     /** Sets the background image of the terminal display. */
+      |      
+[01m[Klib/kpty.cpp:[m[K In member function ‘[01m[Kvoid KPty::close()[m[K’:
+[01m[Klib/kpty.cpp:460:22:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kint chown(const char*, __uid_t, __gid_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+  460 |                 [01;35m[Kchown(d->ttyName.data(), 0, st.st_gid == getgid() ? 0 : -1)[m[K;
+      |                 [01;35m[K~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[Klib/kptydevice.cpp:32[m[K:
+[01m[Klib/kptydevice.h:330:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class T> class QLinkedList[m[K’ is deprecated: Use std::list instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  330 |     [01;35m[KQLinkedList[m[K<QByteArray> buffers;
+      |     [01;35m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qvarlengtharray.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qmetatype.h:48[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qobject.h:54[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QObject:1[m[K,
+                 from [01m[Klib/kpty.h:26[m[K,
+                 from [01m[Klib/kpty_p.h:26[m[K,
+                 from [01m[Klib/kptydevice.h:32[m[K,
+                 from [01m[Klib/kptydevice.cpp:32[m[K:
+[01m[K/usr/include/qt5/QtCore/qcontainerfwd.h:51:26:[m[K [01;36m[Knote: [m[Kdeclared here
+   51 | template <class T> class [01;36m[KQLinkedList[m[K;
+      |                          [01;36m[K^~~~~~~~~~~[m[K
+In file included from [01m[Klib/kptydevice.cpp:32[m[K:
+[01m[Klib/kptydevice.h:[m[K In member function ‘[01m[Kint KRingBuffer::indexAfter(char, int) const[m[K’:
+[01m[Klib/kptydevice.h:281:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class T> class QLinkedList[m[K’ is deprecated: Use std::list instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  281 |         [01;35m[KQLinkedList[m[K<QByteArray>::ConstIterator it = buffers.constBegin();
+      |         [01;35m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qvarlengtharray.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qmetatype.h:48[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qobject.h:54[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QObject:1[m[K,
+                 from [01m[Klib/kpty.h:26[m[K,
+                 from [01m[Klib/kpty_p.h:26[m[K,
+                 from [01m[Klib/kptydevice.h:32[m[K,
+                 from [01m[Klib/kptydevice.cpp:32[m[K:
+[01m[K/usr/include/qt5/QtCore/qcontainerfwd.h:51:26:[m[K [01;36m[Knote: [m[Kdeclared here
+   51 | template <class T> class [01;36m[KQLinkedList[m[K;
+      |                          [01;36m[K^~~~~~~~~~~[m[K
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o ShellCommand.o lib/ShellCommand.cpp
+In file included from [01m[Klib/kptyprocess.h:34[m[K,
+                 from [01m[Klib/kptyprocess.cpp:31[m[K:
+[01m[Klib/kptydevice.h:330:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class T> class QLinkedList[m[K’ is deprecated: Use std::list instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  330 |     [01;35m[KQLinkedList[m[K<QByteArray> buffers;
+      |     [01;35m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qvarlengtharray.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qmetatype.h:48[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qobject.h:54[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qiodevice.h:45[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qprocess.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QProcess:1[m[K,
+                 from [01m[Klib/kprocess.h:35[m[K,
+                 from [01m[Klib/kptyprocess.h:33[m[K,
+                 from [01m[Klib/kptyprocess.cpp:31[m[K:
+[01m[K/usr/include/qt5/QtCore/qcontainerfwd.h:51:26:[m[K [01;36m[Knote: [m[Kdeclared here
+   51 | template <class T> class [01;36m[KQLinkedList[m[K;
+      |                          [01;36m[K^~~~~~~~~~~[m[K
+In file included from [01m[Klib/kptyprocess.h:34[m[K,
+                 from [01m[Klib/kptyprocess.cpp:31[m[K:
+[01m[Klib/kptydevice.h:[m[K In member function ‘[01m[Kint KRingBuffer::indexAfter(char, int) const[m[K’:
+[01m[Klib/kptydevice.h:281:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class T> class QLinkedList[m[K’ is deprecated: Use std::list instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  281 |         [01;35m[KQLinkedList[m[K<QByteArray>::ConstIterator it = buffers.constBegin();
+      |         [01;35m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qvarlengtharray.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qmetatype.h:48[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qobject.h:54[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qiodevice.h:45[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qprocess.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QProcess:1[m[K,
+                 from [01m[Klib/kprocess.h:35[m[K,
+                 from [01m[Klib/kptyprocess.h:33[m[K,
+                 from [01m[Klib/kptyprocess.cpp:31[m[K:
+[01m[K/usr/include/qt5/QtCore/qcontainerfwd.h:51:26:[m[K [01;36m[Knote: [m[Kdeclared here
+   51 | template <class T> class [01;36m[KQLinkedList[m[K;
+      |                          [01;36m[K^~~~~~~~~~~[m[K
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o TerminalCharacterDecoder.o lib/TerminalCharacterDecoder.cpp
+In file included from [01m[Klib/kptyprocess.h:34[m[K,
+                 from [01m[Klib/Pty.h:41[m[K,
+                 from [01m[Klib/Pty.cpp:30[m[K:
+[01m[Klib/kptydevice.h:330:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class T> class QLinkedList[m[K’ is deprecated: Use std::list instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  330 |     [01;35m[KQLinkedList[m[K<QByteArray> buffers;
+      |     [01;35m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qvarlengtharray.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qmetatype.h:48[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qobject.h:54[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qiodevice.h:45[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qprocess.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QProcess:1[m[K,
+                 from [01m[Klib/kprocess.h:35[m[K,
+                 from [01m[Klib/kptyprocess.h:33[m[K,
+                 from [01m[Klib/Pty.h:41[m[K,
+                 from [01m[Klib/Pty.cpp:30[m[K:
+[01m[K/usr/include/qt5/QtCore/qcontainerfwd.h:51:26:[m[K [01;36m[Knote: [m[Kdeclared here
+   51 | template <class T> class [01;36m[KQLinkedList[m[K;
+      |                          [01;36m[K^~~~~~~~~~~[m[K
+In file included from [01m[Klib/kptyprocess.h:34[m[K,
+                 from [01m[Klib/Pty.h:41[m[K,
+                 from [01m[Klib/Pty.cpp:30[m[K:
+[01m[Klib/kptydevice.h:[m[K In member function ‘[01m[Kint KRingBuffer::indexAfter(char, int) const[m[K’:
+[01m[Klib/kptydevice.h:281:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class T> class QLinkedList[m[K’ is deprecated: Use std::list instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  281 |         [01;35m[KQLinkedList[m[K<QByteArray>::ConstIterator it = buffers.constBegin();
+      |         [01;35m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qvarlengtharray.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qmetatype.h:48[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qobject.h:54[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qiodevice.h:45[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qprocess.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QProcess:1[m[K,
+                 from [01m[Klib/kprocess.h:35[m[K,
+                 from [01m[Klib/kptyprocess.h:33[m[K,
+                 from [01m[Klib/Pty.h:41[m[K,
+                 from [01m[Klib/Pty.cpp:30[m[K:
+[01m[K/usr/include/qt5/QtCore/qcontainerfwd.h:51:26:[m[K [01;36m[Knote: [m[Kdeclared here
+   51 | template <class T> class [01;36m[KQLinkedList[m[K;
+      |                          [01;36m[K^~~~~~~~~~~[m[K
+[01m[Klib/ProcessInfo.cpp:[m[K In member function ‘[01m[Kvirtual bool LinuxProcessInfo::readProcInfo(int)[m[K’:
+[01m[Klib/ProcessInfo.cpp:445:56:[m[K [01;35m[Kwarning: [m[K‘[01m[KQString::SkipEmptyParts[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  445 |             uidStrings << uidLine.split('\t', QString::[01;35m[KSkipEmptyParts[m[K);
+      |                                                        [01;35m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qobject.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qiodevice.h:45[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qfiledevice.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qfile.h:44[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QFile:1[m[K,
+                 from [01m[Klib/ProcessInfo.h:24[m[K,
+                 from [01m[Klib/ProcessInfo.cpp:21[m[K:
+[01m[K/usr/include/qt5/QtCore/qstring.h:605:9:[m[K [01;36m[Knote: [m[Kdeclared here
+  605 |         [01;36m[KSkipEmptyParts[m[K Q_DECL_ENUMERATOR_DEPRECATED
+      |         [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[Klib/ProcessInfo.cpp:445:56:[m[K [01;35m[Kwarning: [m[K‘[01m[KQString::SkipEmptyParts[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  445 |             uidStrings << uidLine.split('\t', QString::[01;35m[KSkipEmptyParts[m[K);
+      |                                                        [01;35m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qobject.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qiodevice.h:45[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qfiledevice.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qfile.h:44[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QFile:1[m[K,
+                 from [01m[Klib/ProcessInfo.h:24[m[K,
+                 from [01m[Klib/ProcessInfo.cpp:21[m[K:
+[01m[K/usr/include/qt5/QtCore/qstring.h:605:9:[m[K [01;36m[Knote: [m[Kdeclared here
+  605 |         [01;36m[KSkipEmptyParts[m[K Q_DECL_ENUMERATOR_DEPRECATED
+      |         [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[Klib/ProcessInfo.cpp:445:40:[m[K [01;35m[Kwarning: [m[K‘[01m[KQStringList QString::split(QChar, QString::SplitBehavior, Qt::CaseSensitivity) const[m[K’ is deprecated: Use Qt::SplitBehavior variant instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  445 |             uidStrings << [01;35m[KuidLine.split('\t', QString::SkipEmptyParts)[m[K;
+      |                           [01;35m[K~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qobject.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qiodevice.h:45[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qfiledevice.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qfile.h:44[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QFile:1[m[K,
+                 from [01m[Klib/ProcessInfo.h:24[m[K,
+                 from [01m[Klib/ProcessInfo.cpp:21[m[K:
+[01m[K/usr/include/qt5/QtCore/qstring.h:615:17:[m[K [01;36m[Knote: [m[Kdeclared here
+  615 |     QStringList [01;36m[Ksplit[m[K(QChar sep, SplitBehavior behavior,
+      |                 [01;36m[K^~~~~[m[K
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o TerminalDisplay.o lib/TerminalDisplay.cpp
+In file included from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[Klib/TerminalDisplay.h:142:5:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+  142 |     /** Sets the background image of the terminal display. */
+      |      
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o tools.o lib/tools.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o Vt102Emulation.o lib/Vt102Emulation.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o qmltermwidget_plugin.o src/qmltermwidget_plugin.cpp
+In file included from [01m[Klib/kptyprocess.h:34[m[K,
+                 from [01m[Klib/Pty.h:41[m[K,
+                 from [01m[Klib/Session.cpp:41[m[K:
+[01m[Klib/kptydevice.h:330:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class T> class QLinkedList[m[K’ is deprecated: Use std::list instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  330 |     [01;35m[KQLinkedList[m[K<QByteArray> buffers;
+      |     [01;35m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qvarlengtharray.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qmetatype.h:48[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qobject.h:54[m[K,
+                 from [01m[K/usr/include/qt5/QtWidgets/qwidget.h:45[m[K,
+                 from [01m[K/usr/include/qt5/QtWidgets/QWidget:1[m[K,
+                 from [01m[Klib/Session.h:29[m[K,
+                 from [01m[Klib/Session.cpp:26[m[K:
+[01m[K/usr/include/qt5/QtCore/qcontainerfwd.h:51:26:[m[K [01;36m[Knote: [m[Kdeclared here
+   51 | template <class T> class [01;36m[KQLinkedList[m[K;
+      |                          [01;36m[K^~~~~~~~~~~[m[K
+In file included from [01m[Klib/kptyprocess.h:34[m[K,
+                 from [01m[Klib/Pty.h:41[m[K,
+                 from [01m[Klib/Session.cpp:41[m[K:
+[01m[Klib/kptydevice.h:[m[K In member function ‘[01m[Kint KRingBuffer::indexAfter(char, int) const[m[K’:
+[01m[Klib/kptydevice.h:281:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class T> class QLinkedList[m[K’ is deprecated: Use std::list instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  281 |         [01;35m[KQLinkedList[m[K<QByteArray>::ConstIterator it = buffers.constBegin();
+      |         [01;35m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qvarlengtharray.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qmetatype.h:48[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qobject.h:54[m[K,
+                 from [01m[K/usr/include/qt5/QtWidgets/qwidget.h:45[m[K,
+                 from [01m[K/usr/include/qt5/QtWidgets/QWidget:1[m[K,
+                 from [01m[Klib/Session.h:29[m[K,
+                 from [01m[Klib/Session.cpp:26[m[K:
+[01m[K/usr/include/qt5/QtCore/qcontainerfwd.h:51:26:[m[K [01;36m[Knote: [m[Kdeclared here
+   51 | template <class T> class [01;36m[KQLinkedList[m[K;
+      |                          [01;36m[K^~~~~~~~~~~[m[K
+In file included from [01m[Ksrc/qmltermwidget_plugin.cpp:3[m[K:
+[01m[Klib/TerminalDisplay.h:142:5:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+  142 |     /** Sets the background image of the terminal display. */
+      |      
+[01m[Klib/Session.cpp:[m[K In member function ‘[01m[Kvoid Konsole::Session::activityStateSet(int)[m[K’:
+[01m[Klib/Session.cpp:460:18:[m[K [01;35m[Kwarning: [m[K‘[01m[KQString& QString::sprintf(const char*, ...)[m[K’ is deprecated: Use asprintf(), arg() or QTextStream instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  460 |         [01;35m[Ks.sprintf("Bell in session '%s'",_nameTitle.toUtf8().data())[m[K;
+      |         [01;35m[K~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qhashfunctions.h:44[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qlist.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qstringlist.h:41[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QStringList:1[m[K,
+                 from [01m[Klib/Session.h:28[m[K,
+                 from [01m[Klib/Session.cpp:26[m[K:
+[01m[K/usr/include/qt5/QtCore/qstring.h:393:14:[m[K [01;36m[Knote: [m[Kdeclared here
+  393 |     QString &[01;36m[Ksprintf[m[K(const char *format, ...) Q_ATTRIBUTE_FORMAT_PRINTF(2, 3);
+      |              [01;36m[K^~~~~~~[m[K
+[01m[Klib/Session.cpp:[m[K In member function ‘[01m[Kvoid Konsole::Session::done(int)[m[K’:
+[01m[Klib/Session.cpp:605:28:[m[K [01;35m[Kwarning: [m[K‘[01m[KQString& QString::sprintf(const char*, ...)[m[K’ is deprecated: Use asprintf(), arg() or QTextStream instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  605 |             [01;35m[Kmessage.sprintf("Session '%s' exited with status %d.",[m[K
+      |             [01;35m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  606 | [01;35m[K                          _nameTitle.toUtf8().data(), exitStatus)[m[K;
+      |                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qhashfunctions.h:44[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qlist.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qstringlist.h:41[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QStringList:1[m[K,
+                 from [01m[Klib/Session.h:28[m[K,
+                 from [01m[Klib/Session.cpp:26[m[K:
+[01m[K/usr/include/qt5/QtCore/qstring.h:393:14:[m[K [01;36m[Knote: [m[Kdeclared here
+  393 |     QString &[01;36m[Ksprintf[m[K(const char *format, ...) Q_ATTRIBUTE_FORMAT_PRINTF(2, 3);
+      |              [01;36m[K^~~~~~~[m[K
+[01m[Klib/Session.cpp:608:28:[m[K [01;35m[Kwarning: [m[K‘[01m[KQString& QString::sprintf(const char*, ...)[m[K’ is deprecated: Use asprintf(), arg() or QTextStream instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  608 |             [01;35m[Kmessage.sprintf("Session '%s' crashed.",[m[K
+      |             [01;35m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  609 | [01;35m[K                          _nameTitle.toUtf8().data())[m[K;
+      |                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qhashfunctions.h:44[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qlist.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qstringlist.h:41[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QStringList:1[m[K,
+                 from [01m[Klib/Session.h:28[m[K,
+                 from [01m[Klib/Session.cpp:26[m[K:
+[01m[K/usr/include/qt5/QtCore/qstring.h:393:14:[m[K [01;36m[Knote: [m[Kdeclared here
+  393 |     QString &[01;36m[Ksprintf[m[K(const char *format, ...) Q_ATTRIBUTE_FORMAT_PRINTF(2, 3);
+      |              [01;36m[K^~~~~~~[m[K
+[01m[Klib/Session.cpp:614:24:[m[K [01;35m[Kwarning: [m[K‘[01m[KQString& QString::sprintf(const char*, ...)[m[K’ is deprecated: Use asprintf(), arg() or QTextStream instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  614 |         [01;35m[Kmessage.sprintf("Session '%s' exited unexpectedly.",[m[K
+      |         [01;35m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  615 | [01;35m[K                        _nameTitle.toUtf8().data())[m[K;
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qhashfunctions.h:44[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qlist.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qstringlist.h:41[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QStringList:1[m[K,
+                 from [01m[Klib/Session.h:28[m[K,
+                 from [01m[Klib/Session.cpp:26[m[K:
+[01m[K/usr/include/qt5/QtCore/qstring.h:393:14:[m[K [01;36m[Knote: [m[Kdeclared here
+  393 |     QString &[01;36m[Ksprintf[m[K(const char *format, ...) Q_ATTRIBUTE_FORMAT_PRINTF(2, 3);
+      |              [01;36m[K^~~~~~~[m[K
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o ksession.o src/ksession.cpp
+x86_64-pc-linux-gnu-g++ -march=haswell -O2 -pipe -dM -E -o moc_predefs.h /usr/lib64/qt5/mkspecs/features/data/dummy.cpp
+/usr/lib64/qt5/bin/moc -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --include /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/moc_predefs.h -I/usr/lib64/qt5/mkspecs/linux-g++ -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/lib -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/src -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11 -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/x86_64-pc-linux-gnu -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed -I/usr/include lib/Emulation.h -o moc_Emulation.cpp
+/usr/lib64/qt5/bin/moc -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --include /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/moc_predefs.h -I/usr/lib64/qt5/mkspecs/linux-g++ -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/lib -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/src -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11 -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/x86_64-pc-linux-gnu -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed -I/usr/include lib/Filter.h -o moc_Filter.cpp
+/usr/lib64/qt5/bin/moc -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --include /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/moc_predefs.h -I/usr/lib64/qt5/mkspecs/linux-g++ -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/lib -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/src -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11 -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/x86_64-pc-linux-gnu -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed -I/usr/include lib/HistorySearch.h -o moc_HistorySearch.cpp
+/usr/lib64/qt5/bin/moc -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --include /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/moc_predefs.h -I/usr/lib64/qt5/mkspecs/linux-g++ -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/lib -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/src -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11 -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/x86_64-pc-linux-gnu -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed -I/usr/include lib/kprocess.h -o moc_kprocess.cpp
+/usr/lib64/qt5/bin/moc -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --include /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/moc_predefs.h -I/usr/lib64/qt5/mkspecs/linux-g++ -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/lib -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/src -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11 -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/x86_64-pc-linux-gnu -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed -I/usr/include lib/kptydevice.h -o moc_kptydevice.cpp
+/usr/lib64/qt5/bin/moc -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --include /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/moc_predefs.h -I/usr/lib64/qt5/mkspecs/linux-g++ -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/lib -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/src -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11 -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/x86_64-pc-linux-gnu -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed -I/usr/include lib/kptyprocess.h -o moc_kptyprocess.cpp
+/usr/lib64/qt5/bin/moc -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --include /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/moc_predefs.h -I/usr/lib64/qt5/mkspecs/linux-g++ -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/lib -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/src -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11 -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/x86_64-pc-linux-gnu -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed -I/usr/include lib/Pty.h -o moc_Pty.cpp
+/usr/lib64/qt5/bin/moc -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --include /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/moc_predefs.h -I/usr/lib64/qt5/mkspecs/linux-g++ -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/lib -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/src -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11 -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/x86_64-pc-linux-gnu -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed -I/usr/include lib/ScreenWindow.h -o moc_ScreenWindow.cpp
+[01m[Klib/TerminalDisplay.cpp:[m[K In member function ‘[01m[Kvirtual void Konsole::TerminalDisplay::fontChange(const QFont&)[m[K’:
+[01m[Klib/TerminalDisplay.cpp:224:39:[m[K [01;35m[Kwarning: [m[K‘[01m[Kint QFontMetrics::width(const QString&, int) const[m[K’ is deprecated: Use QFontMetrics::horizontalAdvance [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  224 |   _fontWidth = qRound((double)[01;35m[Kfm.width(QLatin1String(REPCHAR))[m[K/(double)qstrlen(REPCHAR));
+      |                               [01;35m[K~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtWidgets/qwidget.h:50[m[K,
+                 from [01m[K/usr/include/qt5/QtWidgets/qaction.h:46[m[K,
+                 from [01m[K/usr/include/qt5/QtWidgets/QAction:1[m[K,
+                 from [01m[Klib/Filter.h:24[m[K,
+                 from [01m[Klib/TerminalDisplay.h:31[m[K,
+                 from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[K/usr/include/qt5/QtGui/qfontmetrics.h:106:9:[m[K [01;36m[Knote: [m[Kdeclared here
+  106 |     int [01;36m[Kwidth[m[K(const QString &, int len = -1) const;
+      |         [01;36m[K^~~~~[m[K
+[01m[Klib/TerminalDisplay.cpp:228:20:[m[K [01;35m[Kwarning: [m[K‘[01m[Kint QFontMetrics::width(QChar) const[m[K’ is deprecated: Use QFontMetrics::horizontalAdvance [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  228 |   int fw = [01;35m[Kfm.width(QLatin1Char(REPCHAR[0]))[m[K;
+      |            [01;35m[K~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtWidgets/qwidget.h:50[m[K,
+                 from [01m[K/usr/include/qt5/QtWidgets/qaction.h:46[m[K,
+                 from [01m[K/usr/include/qt5/QtWidgets/QAction:1[m[K,
+                 from [01m[Klib/Filter.h:24[m[K,
+                 from [01m[Klib/TerminalDisplay.h:31[m[K,
+                 from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[K/usr/include/qt5/QtGui/qfontmetrics.h:110:9:[m[K [01;36m[Knote: [m[Kdeclared here
+  110 |     int [01;36m[Kwidth[m[K(QChar) const;
+      |         [01;36m[K^~~~~[m[K
+[01m[Klib/TerminalDisplay.cpp:231:23:[m[K [01;35m[Kwarning: [m[K‘[01m[Kint QFontMetrics::width(QChar) const[m[K’ is deprecated: Use QFontMetrics::horizontalAdvance [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  231 |     if (fw != [01;35m[Kfm.width(QLatin1Char(REPCHAR[i]))[m[K)
+      |               [01;35m[K~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtWidgets/qwidget.h:50[m[K,
+                 from [01m[K/usr/include/qt5/QtWidgets/qaction.h:46[m[K,
+                 from [01m[K/usr/include/qt5/QtWidgets/QAction:1[m[K,
+                 from [01m[Klib/Filter.h:24[m[K,
+                 from [01m[Klib/TerminalDisplay.h:31[m[K,
+                 from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[K/usr/include/qt5/QtGui/qfontmetrics.h:110:9:[m[K [01;36m[Knote: [m[Kdeclared here
+  110 |     int [01;36m[Kwidth[m[K(QChar) const;
+      |         [01;36m[K^~~~~[m[K
+[01m[Klib/TerminalDisplay.cpp:[m[K In member function ‘[01m[Kvoid Konsole::TerminalDisplay::setVTFont(const QFont&)[m[K’:
+[01m[Klib/TerminalDisplay.cpp:257:34:[m[K [01;35m[Kwarning: [m[K‘[01m[KQFont::ForceIntegerMetrics[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  257 |     font.setStyleStrategy(QFont::[01;35m[KForceIntegerMetrics[m[K);
+      |                                  [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtQuick/qquickitem.h:50[m[K,
+                 from [01m[K/usr/include/qt5/QtQuick/qquickpainteditem.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQuick/QQuickPaintedItem:1[m[K,
+                 from [01m[Klib/TerminalDisplay.h:28[m[K,
+                 from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[K/usr/include/qt5/QtGui/qfont.h:85:9:[m[K [01;36m[Knote: [m[Kdeclared here
+   85 |         [01;36m[KForceIntegerMetrics[m[K Q_DECL_ENUMERATOR_DEPRECATED = 0x0400,
+      |         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[Klib/TerminalDisplay.cpp:257:34:[m[K [01;35m[Kwarning: [m[K‘[01m[KQFont::ForceIntegerMetrics[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  257 |     font.setStyleStrategy(QFont::[01;35m[KForceIntegerMetrics[m[K);
+      |                                  [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtQuick/qquickitem.h:50[m[K,
+                 from [01m[K/usr/include/qt5/QtQuick/qquickpainteditem.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQuick/QQuickPaintedItem:1[m[K,
+                 from [01m[Klib/TerminalDisplay.h:28[m[K,
+                 from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[K/usr/include/qt5/QtGui/qfont.h:85:9:[m[K [01;36m[Knote: [m[Kdeclared here
+   85 |         [01;36m[KForceIntegerMetrics[m[K Q_DECL_ENUMERATOR_DEPRECATED = 0x0400,
+      |         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[Klib/TerminalDisplay.cpp:[m[K In constructor ‘[01m[KKonsole::TerminalDisplay::TerminalDisplay(QQuickItem*)[m[K’:
+[01m[Klib/TerminalDisplay.cpp:351:25:[m[K [01;35m[Kwarning: [m[K‘[01m[KQPalette::Background[m[K’ is deprecated: Use QPalette::Window instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  351 | ,m_color_role(QPalette::[01;35m[KBackground[m[K)
+      |                         [01;35m[K^~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtWidgets/qwidget.h:48[m[K,
+                 from [01m[K/usr/include/qt5/QtWidgets/qaction.h:46[m[K,
+                 from [01m[K/usr/include/qt5/QtWidgets/QAction:1[m[K,
+                 from [01m[Klib/Filter.h:24[m[K,
+                 from [01m[Klib/TerminalDisplay.h:31[m[K,
+                 from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[K/usr/include/qt5/QtGui/qpalette.h:101:22:[m[K [01;36m[Knote: [m[Kdeclared here
+  101 |                      [01;36m[KBackground[m[K Q_DECL_ENUMERATOR_DEPRECATED_X("Use QPalette::Window instead") = Window
+      |                      [01;36m[K^~~~~~~~~~[m[K
+[01m[Klib/TerminalDisplay.cpp:351:25:[m[K [01;35m[Kwarning: [m[K‘[01m[KQPalette::Background[m[K’ is deprecated: Use QPalette::Window instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  351 | ,m_color_role(QPalette::[01;35m[KBackground[m[K)
+      |                         [01;35m[K^~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtWidgets/qwidget.h:48[m[K,
+                 from [01m[K/usr/include/qt5/QtWidgets/qaction.h:46[m[K,
+                 from [01m[K/usr/include/qt5/QtWidgets/QAction:1[m[K,
+                 from [01m[Klib/Filter.h:24[m[K,
+                 from [01m[Klib/TerminalDisplay.h:31[m[K,
+                 from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[K/usr/include/qt5/QtGui/qpalette.h:101:22:[m[K [01;36m[Knote: [m[Kdeclared here
+  101 |                      [01;36m[KBackground[m[K Q_DECL_ENUMERATOR_DEPRECATED_X("Use QPalette::Window instead") = Window
+      |                      [01;36m[K^~~~~~~~~~[m[K
+In file included from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[Klib/TerminalDisplay.h:899:10:[m[K [01;35m[Kwarning: [m[K‘[01m[KKonsole::TerminalDisplay::m_full_cursor_height[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  899 |     bool [01;35m[Km_full_cursor_height[m[K;
+      |          [01;35m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[Klib/TerminalDisplay.h:891:9:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kint Konsole::TerminalDisplay::_leftBaseMargin[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  891 |     int [01;35m[K_leftBaseMargin[m[K;
+      |         [01;35m[K^~~~~~~~~~~~~~~[m[K
+[01m[Klib/TerminalDisplay.cpp:301:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  301 | [01;35m[KTerminalDisplay[m[K::TerminalDisplay(QQuickItem *parent)
+      | [01;35m[K^~~~~~~~~~~~~~~[m[K
+[01m[Klib/TerminalDisplay.cpp:[m[K In member function ‘[01m[Kvoid Konsole::TerminalDisplay::drawTextFragment(QPainter&, const QRect&, const wstring&, const Konsole::Character*)[m[K’:
+[01m[Klib/TerminalDisplay.cpp:880:49:[m[K [01;35m[Kwarning: [m[K‘[01m[Kconst QBrush& QPalette::background() const[m[K’ is deprecated: Use QPalette::window() instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  880 |     if ( backgroundColor != [01;35m[Kpalette().background()[m[K.color() )
+      |                             [01;35m[K~~~~~~~~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/usr/include/qt5/QtWidgets/qwidget.h:48[m[K,
+                 from [01m[K/usr/include/qt5/QtWidgets/qaction.h:46[m[K,
+                 from [01m[K/usr/include/qt5/QtWidgets/QAction:1[m[K,
+                 from [01m[Klib/Filter.h:24[m[K,
+                 from [01m[Klib/TerminalDisplay.h:31[m[K,
+                 from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[K/usr/include/qt5/QtGui/qpalette.h:149:26:[m[K [01;36m[Knote: [m[Kdeclared here
+  149 |     inline const QBrush &[01;36m[Kbackground[m[K() const { return window(); }
+      |                          [01;36m[K^~~~~~~~~~[m[K
+[01m[Klib/TerminalDisplay.cpp:[m[K In member function ‘[01m[Kint Konsole::TerminalDisplay::textWidth(int, int, int) const[m[K’:
+[01m[Klib/TerminalDisplay.cpp:1537:23:[m[K [01;35m[Kwarning: [m[K‘[01m[Kint QFontMetrics::width(QChar) const[m[K’ is deprecated: Use QFontMetrics::horizontalAdvance [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+ 1537 |     result += [01;35m[Kfm.width(_image[loc(startColumn + column, line)].character)[m[K;
+      |               [01;35m[K~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtWidgets/qwidget.h:50[m[K,
+                 from [01m[K/usr/include/qt5/QtWidgets/qaction.h:46[m[K,
+                 from [01m[K/usr/include/qt5/QtWidgets/QAction:1[m[K,
+                 from [01m[Klib/Filter.h:24[m[K,
+                 from [01m[Klib/TerminalDisplay.h:31[m[K,
+                 from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[K/usr/include/qt5/QtGui/qfontmetrics.h:110:9:[m[K [01;36m[Knote: [m[Kdeclared here
+  110 |     int [01;36m[Kwidth[m[K(QChar) const;
+      |         [01;36m[K^~~~~[m[K
+[01m[Klib/TerminalDisplay.cpp:[m[K In member function ‘[01m[Kvirtual void Konsole::TerminalDisplay::mousePressEvent(QMouseEvent*)[m[K’:
+[01m[Klib/TerminalDisplay.cpp:1938:33:[m[K [01;35m[Kwarning: [m[K‘[01m[KQt::MidButton[m[K’ is deprecated: MidButton is deprecated. Use MiddleButton instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+ 1938 |   else if ( ev->button() == Qt::[01;35m[KMidButton[m[K )
+      |                                 [01;35m[K^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtGui/qcolor.h:45[m[K,
+                 from [01m[K/usr/include/qt5/QtGui/QColor:1[m[K,
+                 from [01m[Klib/TerminalDisplay.h:25[m[K,
+                 from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[K/usr/include/qt5/QtCore/qnamespace.h:132:9:[m[K [01;36m[Knote: [m[Kdeclared here
+  132 |         [01;36m[KMidButton[m[K Q_DECL_ENUMERATOR_DEPRECATED_X("MidButton is deprecated. Use MiddleButton instead") = MiddleButton,
+      |         [01;36m[K^~~~~~~~~[m[K
+[01m[Klib/TerminalDisplay.cpp:[m[K In member function ‘[01m[Kvirtual void Konsole::TerminalDisplay::mouseMoveEvent(QMouseEvent*)[m[K’:
+[01m[Klib/TerminalDisplay.cpp:2028:29:[m[K [01;35m[Kwarning: [m[K‘[01m[KQt::MidButton[m[K’ is deprecated: MidButton is deprecated. Use MiddleButton instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+ 2028 |     if (ev->buttons() & Qt::[01;35m[KMidButton[m[K)
+      |                             [01;35m[K^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtGui/qcolor.h:45[m[K,
+                 from [01m[K/usr/include/qt5/QtGui/QColor:1[m[K,
+                 from [01m[Klib/TerminalDisplay.h:25[m[K,
+                 from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[K/usr/include/qt5/QtCore/qnamespace.h:132:9:[m[K [01;36m[Knote: [m[Kdeclared here
+  132 |         [01;36m[KMidButton[m[K Q_DECL_ENUMERATOR_DEPRECATED_X("MidButton is deprecated. Use MiddleButton instead") = MiddleButton,
+      |         [01;36m[K^~~~~~~~~[m[K
+[01m[Klib/TerminalDisplay.cpp:2070:27:[m[K [01;35m[Kwarning: [m[K‘[01m[KQt::MidButton[m[K’ is deprecated: MidButton is deprecated. Use MiddleButton instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+ 2070 |   if (ev->buttons() & Qt::[01;35m[KMidButton[m[K) return;
+      |                           [01;35m[K^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtGui/qcolor.h:45[m[K,
+                 from [01m[K/usr/include/qt5/QtGui/QColor:1[m[K,
+                 from [01m[Klib/TerminalDisplay.h:25[m[K,
+                 from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[K/usr/include/qt5/QtCore/qnamespace.h:132:9:[m[K [01;36m[Knote: [m[Kdeclared here
+  132 |         [01;36m[KMidButton[m[K Q_DECL_ENUMERATOR_DEPRECATED_X("MidButton is deprecated. Use MiddleButton instead") = MiddleButton,
+      |         [01;36m[K^~~~~~~~~[m[K
+[01m[Klib/TerminalDisplay.cpp:[m[K In member function ‘[01m[Kvirtual void Konsole::TerminalDisplay::mouseReleaseEvent(QMouseEvent*)[m[K’:
+[01m[Klib/TerminalDisplay.cpp:2325:48:[m[K [01;35m[Kwarning: [m[K‘[01m[KQt::MidButton[m[K’ is deprecated: MidButton is deprecated. Use MiddleButton instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+ 2325 |                         || ev->button() == Qt::[01;35m[KMidButton[m[K) )
+      |                                                [01;35m[K^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtGui/qcolor.h:45[m[K,
+                 from [01m[K/usr/include/qt5/QtGui/QColor:1[m[K,
+                 from [01m[Klib/TerminalDisplay.h:25[m[K,
+                 from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[K/usr/include/qt5/QtCore/qnamespace.h:132:9:[m[K [01;36m[Knote: [m[Kdeclared here
+  132 |         [01;36m[KMidButton[m[K Q_DECL_ENUMERATOR_DEPRECATED_X("MidButton is deprecated. Use MiddleButton instead") = MiddleButton,
+      |         [01;36m[K^~~~~~~~~[m[K
+[01m[Klib/TerminalDisplay.cpp:2327:43:[m[K [01;35m[Kwarning: [m[K‘[01m[KQt::MidButton[m[K’ is deprecated: MidButton is deprecated. Use MiddleButton instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+ 2327 |     emit mouseSignal( ev->button() == Qt::[01;35m[KMidButton[m[K ? 1 : 2,
+      |                                           [01;35m[K^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtGui/qcolor.h:45[m[K,
+                 from [01m[K/usr/include/qt5/QtGui/QColor:1[m[K,
+                 from [01m[Klib/TerminalDisplay.h:25[m[K,
+                 from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[K/usr/include/qt5/QtCore/qnamespace.h:132:9:[m[K [01;36m[Knote: [m[Kdeclared here
+  132 |         [01;36m[KMidButton[m[K Q_DECL_ENUMERATOR_DEPRECATED_X("MidButton is deprecated. Use MiddleButton instead") = MiddleButton,
+      |         [01;36m[K^~~~~~~~~[m[K
+[01m[Klib/TerminalDisplay.cpp:[m[K In member function ‘[01m[Kvirtual void Konsole::TerminalDisplay::wheelEvent(QWheelEvent*)[m[K’:
+[01m[Klib/TerminalDisplay.cpp:2474:22:[m[K [01;35m[Kwarning: [m[K‘[01m[KQt::Orientation QWheelEvent::orientation() const[m[K’ is deprecated: Use angleDelta() [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+ 2474 |   if ([01;35m[Kev->orientation()[m[K != Qt::Vertical)
+      |       [01;35m[K~~~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/usr/include/qt5/QtQuick/qquickitem.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQuick/qquickpainteditem.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQuick/QQuickPaintedItem:1[m[K,
+                 from [01m[Klib/TerminalDisplay.h:28[m[K,
+                 from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[K/usr/include/qt5/QtGui/qevent.h:222:28:[m[K [01;36m[Knote: [m[Kdeclared here
+  222 |     inline Qt::Orientation [01;36m[Korientation[m[K() const { return qt4O; }
+      |                            [01;36m[K^~~~~~~~~~~[m[K
+[01m[Klib/TerminalDisplay.cpp:2494:28:[m[K [01;35m[Kwarning: [m[K‘[01m[Kint QWheelEvent::delta() const[m[K’ is deprecated: Use angleDelta() [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+ 2494 |         int key = [01;35m[Kev->delta()[m[K > 0 ? Qt::Key_Up : Qt::Key_Down;
+      |                   [01;35m[K~~~~~~~~~^~[m[K
+In file included from [01m[K/usr/include/qt5/QtQuick/qquickitem.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQuick/qquickpainteditem.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQuick/QQuickPaintedItem:1[m[K,
+                 from [01m[Klib/TerminalDisplay.h:28[m[K,
+                 from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[K/usr/include/qt5/QtGui/qevent.h:219:16:[m[K [01;36m[Knote: [m[Kdeclared here
+  219 |     inline int [01;36m[Kdelta[m[K() const  { return qt4D; }
+      |                [01;36m[K^~~~~[m[K
+[01m[Klib/TerminalDisplay.cpp:2497:37:[m[K [01;35m[Kwarning: [m[K‘[01m[Kint QWheelEvent::delta() const[m[K’ is deprecated: Use angleDelta() [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+ 2497 |         int wheelDegrees = [01;35m[Kev->delta()[m[K / 8;
+      |                            [01;35m[K~~~~~~~~~^~[m[K
+In file included from [01m[K/usr/include/qt5/QtQuick/qquickitem.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQuick/qquickpainteditem.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQuick/QQuickPaintedItem:1[m[K,
+                 from [01m[Klib/TerminalDisplay.h:28[m[K,
+                 from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[K/usr/include/qt5/QtGui/qevent.h:219:16:[m[K [01;36m[Knote: [m[Kdeclared here
+  219 |     inline int [01;36m[Kdelta[m[K() const  { return qt4D; }
+      |                [01;36m[K^~~~~[m[K
+[01m[Klib/TerminalDisplay.cpp:2512:34:[m[K [01;35m[Kwarning: [m[K‘[01m[KQPoint QWheelEvent::pos() const[m[K’ is deprecated: Use position() [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+ 2512 |     getCharacterPosition( [01;35m[Kev->pos()[m[K , charLine , charColumn );
+      |                           [01;35m[K~~~~~~~^~[m[K
+In file included from [01m[K/usr/include/qt5/QtQuick/qquickitem.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQuick/qquickpainteditem.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQuick/QQuickPaintedItem:1[m[K,
+                 from [01m[Klib/TerminalDisplay.h:28[m[K,
+                 from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[K/usr/include/qt5/QtGui/qevent.h:225:19:[m[K [01;36m[Knote: [m[Kdeclared here
+  225 |     inline QPoint [01;36m[Kpos[m[K() const { return p.toPoint(); }
+      |                   [01;36m[K^~~[m[K
+[01m[Klib/TerminalDisplay.cpp:2514:32:[m[K [01;35m[Kwarning: [m[K‘[01m[Kint QWheelEvent::delta() const[m[K’ is deprecated: Use angleDelta() [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+ 2514 |     emit mouseSignal( [01;35m[Kev->delta()[m[K > 0 ? 4 : 5,
+      |                       [01;35m[K~~~~~~~~~^~[m[K
+In file included from [01m[K/usr/include/qt5/QtQuick/qquickitem.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQuick/qquickpainteditem.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQuick/QQuickPaintedItem:1[m[K,
+                 from [01m[Klib/TerminalDisplay.h:28[m[K,
+                 from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[K/usr/include/qt5/QtGui/qevent.h:219:16:[m[K [01;36m[Knote: [m[Kdeclared here
+  219 |     inline int [01;36m[Kdelta[m[K() const  { return qt4D; }
+      |                [01;36m[K^~~~~[m[K
+[01m[Klib/TerminalDisplay.cpp:[m[K In member function ‘[01m[Kvirtual QVariant Konsole::TerminalDisplay::inputMethodQuery(Qt::InputMethodQuery) const[m[K’:
+[01m[Klib/TerminalDisplay.cpp:2834:18:[m[K [01;35m[Kwarning: [m[K‘[01m[KQt::ImMicroFocus[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+ 2834 |         case Qt::[01;35m[KImMicroFocus[m[K:
+      |                  [01;35m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtGui/qcolor.h:45[m[K,
+                 from [01m[K/usr/include/qt5/QtGui/QColor:1[m[K,
+                 from [01m[Klib/TerminalDisplay.h:25[m[K,
+                 from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[K/usr/include/qt5/QtCore/qnamespace.h:1415:9:[m[K [01;36m[Knote: [m[Kdeclared here
+ 1415 |         [01;36m[KImMicroFocus[m[K Q_DECL_ENUMERATOR_DEPRECATED = 0x2,
+      |         [01;36m[K^~~~~~~~~~~~[m[K
+[01m[Klib/TerminalDisplay.cpp:[m[K In member function ‘[01m[Kvoid Konsole::TerminalDisplay::swapColorTable()[m[K’:
+[01m[Klib/TerminalDisplay.cpp:2982:35:[m[K [01;35m[Kwarning: [m[Kimplicitly-declared ‘[01m[Kconstexpr Konsole::ColorEntry::ColorEntry(const Konsole::ColorEntry&)[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-copy-Wdeprecated-copy]8;;[m[K]
+ 2982 |   ColorEntry color = _colorTable[1[01;35m[K][m[K;
+      |                                   [01;35m[K^[m[K
+In file included from [01m[Klib/Character.h:30[m[K,
+                 from [01m[Klib/TerminalDisplay.h:32[m[K,
+                 from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[Klib/CharacterColor.h:84:8:[m[K [01;36m[Knote: [m[Kbecause ‘[01m[KKonsole::ColorEntry[m[K’ has user-provided ‘[01m[Kvoid Konsole::ColorEntry::operator=(const Konsole::ColorEntry&)[m[K’
+   84 |   void [01;36m[Koperator[m[K=(const ColorEntry& rhs)
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[Klib/TerminalDisplay.cpp:[m[K In member function ‘[01m[Kvoid Konsole::TerminalDisplay::doDrag()[m[K’:
+[01m[Klib/TerminalDisplay.cpp:3166:29:[m[K [01;35m[Kwarning: [m[K‘[01m[KQt::DropAction QDrag::start(Qt::DropActions)[m[K’ is deprecated: Use QDrag::exec() instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+ 3166 |   [01;35m[KdragInfo.dragObject->start(Qt::CopyAction)[m[K;
+      |   [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtGui/QDrag:1[m[K,
+                 from [01m[Klib/TerminalDisplay.cpp:45[m[K:
+[01m[K/usr/include/qt5/QtGui/qdrag.h:79:20:[m[K [01;36m[Knote: [m[Kdeclared here
+   79 |     Qt::DropAction [01;36m[Kstart[m[K(Qt::DropActions supportedActions = Qt::CopyAction);
+      |                    [01;36m[K^~~~~[m[K
+[01m[Klib/TerminalDisplay.cpp:[m[K In member function ‘[01m[Kvoid Konsole::TerminalDisplay::simulateWheel(int, int, int, int, QPointF)[m[K’:
+[01m[Klib/TerminalDisplay.cpp:3412:112:[m[K [01;35m[Kwarning: [m[K‘[01m[KQWheelEvent::QWheelEvent(const QPointF&, int, Qt::MouseButtons, Qt::KeyboardModifiers, Qt::Orientation)[m[K’ is deprecated: Use the last QWheelEvent constructor taking pixelDelta, angleDelta, phase, and inverted [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+ 3412 | elta.y(), (Qt::MouseButton) buttons, (Qt::KeyboardModifier) modifiers[01;35m[K)[m[K;
+      |                                                                      [01;35m[K^[m[K
+
+In file included from [01m[K/usr/include/qt5/QtQuick/qquickitem.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQuick/qquickpainteditem.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQuick/QQuickPaintedItem:1[m[K,
+                 from [01m[Klib/TerminalDisplay.h:28[m[K,
+                 from [01m[Klib/TerminalDisplay.cpp:24[m[K:
+[01m[K/usr/include/qt5/QtGui/qevent.h:181:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  181 |     [01;36m[KQWheelEvent[m[K(const QPointF &pos, int delta,
+      |     [01;36m[K^~~~~~~~~~~[m[K
+/usr/lib64/qt5/bin/moc -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --include /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/moc_predefs.h -I/usr/lib64/qt5/mkspecs/linux-g++ -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/lib -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/src -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11 -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/x86_64-pc-linux-gnu -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed -I/usr/include lib/Session.h -o moc_Session.cpp
+/usr/lib64/qt5/bin/moc -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --include /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/moc_predefs.h -I/usr/lib64/qt5/mkspecs/linux-g++ -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/lib -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/src -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11 -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/x86_64-pc-linux-gnu -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed -I/usr/include lib/TerminalDisplay.h -o moc_TerminalDisplay.cpp
+[01m[Klib/Vt102Emulation.cpp:[m[K In member function ‘[01m[Kvirtual char Konsole::Vt102Emulation::eraseChar() const[m[K’:
+[01m[Klib/Vt102Emulation.cpp:1495:62:[m[K [01;35m[Kwarning: [m[K‘[01m[Kconstexpr QFlags<T>::QFlags(QFlags<T>::Zero) [with Enum = Qt::KeyboardModifier; QFlags<T>::Zero = int QFlags<Qt::KeyboardModifier>::Private::*][m[K’ is deprecated: Use default constructor instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+ 1495 |   KeyboardTranslator::Entry entry = [01;35m[K_keyTranslator->findEntry([m[K
+      |                                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+ 1496 | [01;35m[K                                            Qt::Key_Backspace,[m[K
+      |                                             [01;35m[K~~~~~~~~~~~~~~~~~~[m[K
+ 1497 | [01;35m[K                                            0,[m[K
+      |                                             [01;35m[K~~[m[K                
+ 1498 | [01;35m[K                                            0)[m[K;
+      |                                             [01;35m[K~~[m[K                
+In file included from [01m[K/usr/include/qt5/QtCore/qglobal.h:1299[m[K,
+                 from [01m[K/usr/include/qt5/QtGui/qtguiglobal.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtGui/qevent.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtGui/QKeyEvent:1[m[K,
+                 from [01m[Klib/Vt102Emulation.h:30[m[K,
+                 from [01m[Klib/Vt102Emulation.cpp:24[m[K:
+[01m[K/usr/include/qt5/QtCore/qflags.h:123:80:[m[K [01;36m[Knote: [m[Kdeclared here
+  123 | ("Use default constructor instead") Q_DECL_CONSTEXPR inline [01;36m[KQFlags[m[K(Zero) noexcept : i(0) {}
+      |                                                             [01;36m[K^~~~~~[m[K
+
+[01m[Klib/Vt102Emulation.cpp:1495:62:[m[K [01;35m[Kwarning: [m[K‘[01m[Kconstexpr QFlags<T>::QFlags(QFlags<T>::Zero) [with Enum = Konsole::KeyboardTranslator::State; QFlags<T>::Zero = int QFlags<Konsole::KeyboardTranslator::State>::Private::*][m[K’ is deprecated: Use default constructor instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+ 1495 |   KeyboardTranslator::Entry entry = [01;35m[K_keyTranslator->findEntry([m[K
+      |                                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+ 1496 | [01;35m[K                                            Qt::Key_Backspace,[m[K
+      |                                             [01;35m[K~~~~~~~~~~~~~~~~~~[m[K
+ 1497 | [01;35m[K                                            0,[m[K
+      |                                             [01;35m[K~~[m[K                
+ 1498 | [01;35m[K                                            0)[m[K;
+      |                                             [01;35m[K~~[m[K                
+In file included from [01m[K/usr/include/qt5/QtCore/qglobal.h:1299[m[K,
+                 from [01m[K/usr/include/qt5/QtGui/qtguiglobal.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtGui/qevent.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtGui/QKeyEvent:1[m[K,
+                 from [01m[Klib/Vt102Emulation.h:30[m[K,
+                 from [01m[Klib/Vt102Emulation.cpp:24[m[K:
+[01m[K/usr/include/qt5/QtCore/qflags.h:123:80:[m[K [01;36m[Knote: [m[Kdeclared here
+  123 | ("Use default constructor instead") Q_DECL_CONSTEXPR inline [01;36m[KQFlags[m[K(Zero) noexcept : i(0) {}
+      |                                                             [01;36m[K^~~~~~[m[K
+
+/usr/lib64/qt5/bin/moc -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --include /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/moc_predefs.h -I/usr/lib64/qt5/mkspecs/linux-g++ -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/lib -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/src -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11 -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/x86_64-pc-linux-gnu -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed -I/usr/include lib/Vt102Emulation.h -o moc_Vt102Emulation.cpp
+/usr/lib64/qt5/bin/moc -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --include /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/moc_predefs.h -I/usr/lib64/qt5/mkspecs/linux-g++ -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/lib -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/src -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11 -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/x86_64-pc-linux-gnu -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed -I/usr/include src/qmltermwidget_plugin.h -o moc_qmltermwidget_plugin.cpp
+/usr/lib64/qt5/bin/moc -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --include /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/moc_predefs.h -I/usr/lib64/qt5/mkspecs/linux-g++ -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/lib -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/src -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11 -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/x86_64-pc-linux-gnu -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed -I/usr/include src/ksession.h -o moc_ksession.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o moc_Emulation.o moc_Emulation.cpp
+[01m[Klib/TerminalDisplay.cpp:[m[K In member function ‘[01m[Kvirtual bool Konsole::TerminalDisplay::event(QEvent*)[m[K’:
+[01m[Klib/TerminalDisplay.cpp:2926:54:[m[K [01;35m[Kwarning: [m[Kthis statement may fall through [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-fallthrough=-Wimplicit-fallthrough=]8;;[m[K]
+ 2926 |         _scrollBar->setPalette( [01;35m[KQApplication::palette()[m[K );
+      |                                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[Klib/TerminalDisplay.cpp:2927:5:[m[K [01;36m[Knote: [m[Khere
+ 2927 |     [01;36m[Kcase[m[K QEvent::InputMethodQuery:
+      |     [01;36m[K^~~~[m[K
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o moc_Filter.o moc_Filter.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o moc_HistorySearch.o moc_HistorySearch.cpp
+src/ksession.h:40: Warning: Property declaration shellProgram has no READ accessor function or associated MEMBER variable. The property will be invalid.
+src/ksession.h:41: Warning: Property declaration shellProgramArgs has no READ accessor function or associated MEMBER variable. The property will be invalid.
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o moc_kprocess.o moc_kprocess.cpp
+[01m[Klib/Vt102Emulation.cpp:[m[K In member function ‘[01m[Kvoid Konsole::Vt102Emulation::reportCursorPosition()[m[K’:
+[01m[Klib/Vt102Emulation.cpp:877:24:[m[K [01;35m[Kwarning: [m[K‘[01m[K%d[m[K’ directive writing between 1 and 11 bytes into a region of size between 6 and 16 [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-overflow=-Wformat-overflow=]8;;[m[K]
+  877 |   sprintf(tmp,"\033[%d;[01;35m[K%d[m[KR",_currentScreen->getCursorY()+1,_currentScreen->getCursorX()+1);
+      |                        [01;35m[K^~[m[K
+[01m[Klib/Vt102Emulation.cpp:877:15:[m[K [01;36m[Knote: [m[Kdirective argument in the range [-2147483647, 2147483647]
+  877 |   sprintf(tmp,[01;36m[K"\033[%d;%dR"[m[K,_currentScreen->getCursorY()+1,_currentScreen->getCursorX()+1);
+      |               [01;36m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/stdio.h:866[m[K,
+                 from [01m[Klib/Vt102Emulation.h:27[m[K,
+                 from [01m[Klib/Vt102Emulation.cpp:24[m[K:
+[01m[K/usr/include/bits/stdio2.h:38:34:[m[K [01;36m[Knote: [m[K‘[01m[K__builtin___sprintf_chk[m[K’ output between 7 and 27 bytes into a destination of size 20
+   38 |   return [01;36m[K__builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,[m[K
+      |          [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   39 | [01;36m[K                                  __glibc_objsize (__s), __fmt,[m[K
+      |                                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   40 | [01;36m[K                                  __va_arg_pack ())[m[K;
+      |                                   [01;36m[K~~~~~~~~~~~~~~~~~[m[K
+[01m[Klib/Vt102Emulation.cpp:[m[K In member function ‘[01m[Kvirtual void Konsole::Vt102Emulation::sendMouseEvent(int, int, int, int)[m[K’:
+[01m[Klib/Vt102Emulation.cpp:960:56:[m[K [01;35m[Kwarning: [m[K‘[01m[K%d[m[K’ directive output may be truncated writing between 1 and 10 bytes into a region of size between 7 and 26 [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-truncation=-Wformat-truncation=]8;;[m[K]
+  960 |         snprintf(command, sizeof(command), "\033[%d;%d;[01;35m[K%d[m[KM", cb + 0x20, cx, cy);
+      |                                                        [01;35m[K^~[m[K
+[01m[Klib/Vt102Emulation.cpp:960:44:[m[K [01;36m[Knote: [m[Kdirective argument in the range [1, 2147483647]
+  960 |         snprintf(command, sizeof(command), [01;36m[K"\033[%d;%d;%dM"[m[K, cb + 0x20, cx, cy);
+      |                                            [01;36m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/stdio.h:866[m[K,
+                 from [01m[Klib/Vt102Emulation.h:27[m[K,
+                 from [01m[Klib/Vt102Emulation.cpp:24[m[K:
+[01m[K/usr/include/bits/stdio2.h:71:35:[m[K [01;36m[Knote: [m[K‘[01m[K__builtin___snprintf_chk[m[K’ output between 9 and 37 bytes into a destination of size 32
+   71 |   return [01;36m[K__builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,[m[K
+      |          [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   72 | [01;36m[K                                   __glibc_objsize (__s), __fmt,[m[K
+      |                                    [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   73 | [01;36m[K                                   __va_arg_pack ())[m[K;
+      |                                    [01;36m[K~~~~~~~~~~~~~~~~~[m[K
+[01m[Ksrc/ksession.cpp:[m[K In member function ‘[01m[Kvoid KSession::sendKey(int, int, int) const[m[K’:
+[01m[Ksrc/ksession.cpp:239:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krep[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  239 | void KSession::sendKey([01;35m[Kint rep[m[K, int key, int mod) const
+      |                        [01;35m[K~~~~^~~[m[K
+[01m[Ksrc/ksession.cpp:239:37:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kkey[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  239 | void KSession::sendKey(int rep, [01;35m[Kint key[m[K, int mod) const
+      |                                 [01;35m[K~~~~^~~[m[K
+[01m[Ksrc/ksession.cpp:239:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmod[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  239 | void KSession::sendKey(int rep, int key, [01;35m[Kint mod[m[K) const
+      |                                          [01;35m[K~~~~^~~[m[K
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o moc_kptydevice.o moc_kptydevice.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o moc_kptyprocess.o moc_kptyprocess.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o moc_Pty.o moc_Pty.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o moc_ScreenWindow.o moc_ScreenWindow.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o moc_Session.o moc_Session.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o moc_TerminalDisplay.o moc_TerminalDisplay.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o moc_Vt102Emulation.o moc_Vt102Emulation.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o moc_qmltermwidget_plugin.o moc_qmltermwidget_plugin.cpp
+In file included from [01m[Kmoc_TerminalDisplay.cpp:10[m[K:
+[01m[Klib/TerminalDisplay.h:142:5:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+  142 |     /** Sets the background image of the terminal display. */
+      |      
+In file included from [01m[Kmoc_kptydevice.cpp:10[m[K:
+[01m[Klib/kptydevice.h:330:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class T> class QLinkedList[m[K’ is deprecated: Use std::list instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  330 |     [01;35m[KQLinkedList[m[K<QByteArray> buffers;
+      |     [01;35m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qvarlengtharray.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qmetatype.h:48[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qobject.h:54[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QObject:1[m[K,
+                 from [01m[Klib/kpty.h:26[m[K,
+                 from [01m[Klib/kpty_p.h:26[m[K,
+                 from [01m[Klib/kptydevice.h:32[m[K,
+                 from [01m[Kmoc_kptydevice.cpp:10[m[K:
+[01m[K/usr/include/qt5/QtCore/qcontainerfwd.h:51:26:[m[K [01;36m[Knote: [m[Kdeclared here
+   51 | template <class T> class [01;36m[KQLinkedList[m[K;
+      |                          [01;36m[K^~~~~~~~~~~[m[K
+In file included from [01m[Kmoc_kptydevice.cpp:10[m[K:
+[01m[Klib/kptydevice.h:[m[K In member function ‘[01m[Kint KRingBuffer::indexAfter(char, int) const[m[K’:
+[01m[Klib/kptydevice.h:281:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class T> class QLinkedList[m[K’ is deprecated: Use std::list instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  281 |         [01;35m[KQLinkedList[m[K<QByteArray>::ConstIterator it = buffers.constBegin();
+      |         [01;35m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qvarlengtharray.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qmetatype.h:48[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qobject.h:54[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QObject:1[m[K,
+                 from [01m[Klib/kpty.h:26[m[K,
+                 from [01m[Klib/kpty_p.h:26[m[K,
+                 from [01m[Klib/kptydevice.h:32[m[K,
+                 from [01m[Kmoc_kptydevice.cpp:10[m[K:
+[01m[K/usr/include/qt5/QtCore/qcontainerfwd.h:51:26:[m[K [01;36m[Knote: [m[Kdeclared here
+   51 | template <class T> class [01;36m[KQLinkedList[m[K;
+      |                          [01;36m[K^~~~~~~~~~~[m[K
+In file included from [01m[Klib/kptyprocess.h:34[m[K,
+                 from [01m[Kmoc_kptyprocess.cpp:10[m[K:
+[01m[Klib/kptydevice.h:330:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class T> class QLinkedList[m[K’ is deprecated: Use std::list instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  330 |     [01;35m[KQLinkedList[m[K<QByteArray> buffers;
+      |     [01;35m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qvarlengtharray.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qmetatype.h:48[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qobject.h:54[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qiodevice.h:45[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qprocess.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QProcess:1[m[K,
+                 from [01m[Klib/kprocess.h:35[m[K,
+                 from [01m[Klib/kptyprocess.h:33[m[K,
+                 from [01m[Kmoc_kptyprocess.cpp:10[m[K:
+[01m[K/usr/include/qt5/QtCore/qcontainerfwd.h:51:26:[m[K [01;36m[Knote: [m[Kdeclared here
+   51 | template <class T> class [01;36m[KQLinkedList[m[K;
+      |                          [01;36m[K^~~~~~~~~~~[m[K
+In file included from [01m[Klib/kptyprocess.h:34[m[K,
+                 from [01m[Kmoc_kptyprocess.cpp:10[m[K:
+[01m[Klib/kptydevice.h:[m[K In member function ‘[01m[Kint KRingBuffer::indexAfter(char, int) const[m[K’:
+[01m[Klib/kptydevice.h:281:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class T> class QLinkedList[m[K’ is deprecated: Use std::list instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  281 |         [01;35m[KQLinkedList[m[K<QByteArray>::ConstIterator it = buffers.constBegin();
+      |         [01;35m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qvarlengtharray.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qmetatype.h:48[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qobject.h:54[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qiodevice.h:45[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qprocess.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QProcess:1[m[K,
+                 from [01m[Klib/kprocess.h:35[m[K,
+                 from [01m[Klib/kptyprocess.h:33[m[K,
+                 from [01m[Kmoc_kptyprocess.cpp:10[m[K:
+[01m[K/usr/include/qt5/QtCore/qcontainerfwd.h:51:26:[m[K [01;36m[Knote: [m[Kdeclared here
+   51 | template <class T> class [01;36m[KQLinkedList[m[K;
+      |                          [01;36m[K^~~~~~~~~~~[m[K
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -D_REENTRANT -Wall -Wextra -fPIC -DHAVE_POSIX_OPENPT -DHAVE_SYS_TIME_H -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -Ilib -Isrc -I/usr/include/qt5 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o moc_ksession.o moc_ksession.cpp
+In file included from [01m[Klib/kptyprocess.h:34[m[K,
+                 from [01m[Klib/Pty.h:41[m[K,
+                 from [01m[Kmoc_Pty.cpp:10[m[K:
+[01m[Klib/kptydevice.h:330:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class T> class QLinkedList[m[K’ is deprecated: Use std::list instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  330 |     [01;35m[KQLinkedList[m[K<QByteArray> buffers;
+      |     [01;35m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qvarlengtharray.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qmetatype.h:48[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qobject.h:54[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qiodevice.h:45[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qprocess.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QProcess:1[m[K,
+                 from [01m[Klib/kprocess.h:35[m[K,
+                 from [01m[Klib/kptyprocess.h:33[m[K,
+                 from [01m[Klib/Pty.h:41[m[K,
+                 from [01m[Kmoc_Pty.cpp:10[m[K:
+[01m[K/usr/include/qt5/QtCore/qcontainerfwd.h:51:26:[m[K [01;36m[Knote: [m[Kdeclared here
+   51 | template <class T> class [01;36m[KQLinkedList[m[K;
+      |                          [01;36m[K^~~~~~~~~~~[m[K
+In file included from [01m[Klib/kptyprocess.h:34[m[K,
+                 from [01m[Klib/Pty.h:41[m[K,
+                 from [01m[Kmoc_Pty.cpp:10[m[K:
+[01m[Klib/kptydevice.h:[m[K In member function ‘[01m[Kint KRingBuffer::indexAfter(char, int) const[m[K’:
+[01m[Klib/kptydevice.h:281:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class T> class QLinkedList[m[K’ is deprecated: Use std::list instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  281 |         [01;35m[KQLinkedList[m[K<QByteArray>::ConstIterator it = buffers.constBegin();
+      |         [01;35m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qvarlengtharray.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qmetatype.h:48[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qobject.h:54[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qiodevice.h:45[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/qprocess.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtCore/QProcess:1[m[K,
+                 from [01m[Klib/kprocess.h:35[m[K,
+                 from [01m[Klib/kptyprocess.h:33[m[K,
+                 from [01m[Klib/Pty.h:41[m[K,
+                 from [01m[Kmoc_Pty.cpp:10[m[K:
+[01m[K/usr/include/qt5/QtCore/qcontainerfwd.h:51:26:[m[K [01;36m[Knote: [m[Kdeclared here
+   51 | template <class T> class [01;36m[KQLinkedList[m[K;
+      |                          [01;36m[K^~~~~~~~~~~[m[K
+rm -f libqmltermwidget.so
+x86_64-pc-linux-gnu-g++ -Wl,-O1 -Wl,--as-needed -shared -o libqmltermwidget.so BlockArray.o ColorScheme.o Emulation.o Filter.o History.o HistorySearch.o KeyboardTranslator.o konsole_wcwidth.o kprocess.o kpty.o kptydevice.o kptyprocess.o ProcessInfo.o Pty.o Screen.o ScreenWindow.o Session.o ShellCommand.o TerminalCharacterDecoder.o TerminalDisplay.o tools.o Vt102Emulation.o qmltermwidget_plugin.o ksession.o moc_Emulation.o moc_Filter.o moc_HistorySearch.o moc_kprocess.o moc_kptydevice.o moc_kptyprocess.o moc_Pty.o moc_ScreenWindow.o moc_Session.o moc_TerminalDisplay.o moc_Vt102Emulation.o moc_qmltermwidget_plugin.o moc_ksession.o  /usr/lib64/libQt5Quick.so /usr/lib64/libQt5Widgets.so /usr/lib64/libQt5Gui.so /usr/lib64/libQt5QmlModels.so /usr/lib64/libQt5Qml.so /usr/lib64/libQt5Network.so /usr/lib64/libQt5Core.so -lGL -lpthread    
+mv -f libqmltermwidget.so QMLTermWidget/libqmltermwidget.so
+cp -f -R /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/lib/color-schemes /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/QMLTermWidget && cp -f -R /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/lib/kb-layouts /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/QMLTermWidget && cp -f /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/src/qmldir /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/QMLTermWidget && cp -f /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/src/QMLTermScrollbar.qml /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/QMLTermWidget
+make[1]: Leaving directory '/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget'
+cd app/ && ( test -e Makefile || /usr/lib64/qt5/bin/qmake -o Makefile /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/app/app.pro 'QMAKE_AR=x86_64-pc-linux-gnu-ar cqs' QMAKE_CC=x86_64-pc-linux-gnu-gcc QMAKE_LINK_C=x86_64-pc-linux-gnu-gcc QMAKE_LINK_C_SHLIB=x86_64-pc-linux-gnu-gcc QMAKE_CXX=x86_64-pc-linux-gnu-g++ QMAKE_LINK=x86_64-pc-linux-gnu-g++ QMAKE_LINK_SHLIB=x86_64-pc-linux-gnu-g++ QMAKE_OBJCOPY=x86_64-pc-linux-gnu-objcopy QMAKE_RANLIB= QMAKE_STRIP= 'QMAKE_CFLAGS=-march=haswell -O2 -pipe' QMAKE_CFLAGS_RELEASE= QMAKE_CFLAGS_DEBUG= 'QMAKE_CXXFLAGS=-march=haswell -O2 -pipe' QMAKE_CXXFLAGS_RELEASE= QMAKE_CXXFLAGS_DEBUG= 'QMAKE_LFLAGS=-Wl,-O1 -Wl,--as-needed' QMAKE_LFLAGS_RELEASE= QMAKE_LFLAGS_DEBUG= PREFIX=/usr ) && make -f Makefile 
+make[1]: Entering directory '/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/app'
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -Wall -Wextra -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB -I. -I/usr/include/qt5 -I/usr/include/qt5/QtQuickControls2 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtSql -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o main.o main.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -Wall -Wextra -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB -I. -I/usr/include/qt5 -I/usr/include/qt5/QtQuickControls2 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtSql -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o fileio.o fileio.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -Wall -Wextra -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB -I. -I/usr/include/qt5 -I/usr/include/qt5/QtQuickControls2 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtSql -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o monospacefontmanager.o monospacefontmanager.cpp
+/usr/lib64/qt5/bin/rcc -name resources qml/resources.qrc -o qrc_resources.cpp
+x86_64-pc-linux-gnu-g++ -march=haswell -O2 -pipe -Wall -Wextra -dM -E -o moc_predefs.h /usr/lib64/qt5/mkspecs/features/data/dummy.cpp
+/usr/lib64/qt5/bin/moc -DQT_NO_DEBUG -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --include /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/app/moc_predefs.h -I/usr/lib64/qt5/mkspecs/linux-g++ -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/app -I/usr/include/qt5 -I/usr/include/qt5/QtQuickControls2 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtSql -I/usr/include/qt5/QtCore -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11 -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/x86_64-pc-linux-gnu -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed -I/usr/include fileio.h -o moc_fileio.cpp
+/usr/lib64/qt5/bin/moc -DQT_NO_DEBUG -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB --include /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/app/moc_predefs.h -I/usr/lib64/qt5/mkspecs/linux-g++ -I/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/app -I/usr/include/qt5 -I/usr/include/qt5/QtQuickControls2 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtSql -I/usr/include/qt5/QtCore -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11 -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/x86_64-pc-linux-gnu -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include/g++-v11/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed -I/usr/include monospacefontmanager.h -o moc_monospacefontmanager.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -Wall -Wextra -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB -I. -I/usr/include/qt5 -I/usr/include/qt5/QtQuickControls2 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtSql -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o moc_fileio.o moc_fileio.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -Wall -Wextra -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB -I. -I/usr/include/qt5 -I/usr/include/qt5/QtQuickControls2 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtSql -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o moc_monospacefontmanager.o moc_monospacefontmanager.cpp
+x86_64-pc-linux-gnu-g++ -c -march=haswell -O2 -pipe -Wall -Wextra -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_CORE_LIB -I. -I/usr/include/qt5 -I/usr/include/qt5/QtQuickControls2 -I/usr/include/qt5/QtQuick -I/usr/include/qt5/QtWidgets -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtQmlModels -I/usr/include/qt5/QtQml -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtSql -I/usr/include/qt5/QtCore -I. -I/usr/lib64/qt5/mkspecs/linux-g++ -o qrc_resources.o qrc_resources.cpp
+[01m[Kmain.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[Kmain.cpp:52:154:[m[K [01;35m[Kwarning: [m[K‘[01m[KQTextStream& QTextStreamFunctions::endl(QTextStream&)[m[K’ is deprecated: Use Qt::endl [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   52 | gram <prog>] [-p|--profile <prof>] [--fullscreen] [-h|--help]" << [01;35m[Kendl[m[K;
+      |                                                                   [01;35m[K^~~~[m[K
+
+In file included from [01m[K/usr/include/qt5/QtCore/qdebug.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlprivate.h:68[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqml.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlengine.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlapplicationengine.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/QQmlApplicationEngine:1[m[K,
+                 from [01m[Kmain.cpp:1[m[K:
+[01m[K/usr/include/qt5/QtCore/qtextstream.h:293:75:[m[K [01;36m[Knote: [m[Kdeclared here
+  293 | QT_DEPRECATED_VERSION_X(5, 15, "Use Qt::endl") QTextStream &[01;36m[Kendl[m[K(QTextStream &s);
+      |                                                             [01;36m[K^~~~[m[K
+
+[01m[Kmain.cpp:52:154:[m[K [01;35m[Kwarning: [m[K‘[01m[KQTextStream& QTextStreamFunctions::endl(QTextStream&)[m[K’ is deprecated: Use Qt::endl [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   52 | gram <prog>] [-p|--profile <prof>] [--fullscreen] [-h|--help]" << [01;35m[Kendl[m[K;
+      |                                                                   [01;35m[K^~~~[m[K
+
+In file included from [01m[K/usr/include/qt5/QtCore/qdebug.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlprivate.h:68[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqml.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlengine.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlapplicationengine.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/QQmlApplicationEngine:1[m[K,
+                 from [01m[Kmain.cpp:1[m[K:
+[01m[K/usr/include/qt5/QtCore/qtextstream.h:293:75:[m[K [01;36m[Knote: [m[Kdeclared here
+  293 | QT_DEPRECATED_VERSION_X(5, 15, "Use Qt::endl") QTextStream &[01;36m[Kendl[m[K(QTextStream &s);
+      |                                                             [01;36m[K^~~~[m[K
+
+[01m[Kmain.cpp:53:90:[m[K [01;35m[Kwarning: [m[K‘[01m[KQTextStream& QTextStreamFunctions::endl(QTextStream&)[m[K’ is deprecated: Use Qt::endl [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   53 | fault-settings  Run cool-retro-term with the default settings" << [01;35m[Kendl[m[K;
+      |                                                                   [01;35m[K^~~~[m[K
+
+In file included from [01m[K/usr/include/qt5/QtCore/qdebug.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlprivate.h:68[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqml.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlengine.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlapplicationengine.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/QQmlApplicationEngine:1[m[K,
+                 from [01m[Kmain.cpp:1[m[K:
+[01m[K/usr/include/qt5/QtCore/qtextstream.h:293:75:[m[K [01;36m[Knote: [m[Kdeclared here
+  293 | QT_DEPRECATED_VERSION_X(5, 15, "Use Qt::endl") QTextStream &[01;36m[Kendl[m[K(QTextStream &s);
+      |                                                             [01;36m[K^~~~[m[K
+
+[01m[Kmain.cpp:53:90:[m[K [01;35m[Kwarning: [m[K‘[01m[KQTextStream& QTextStreamFunctions::endl(QTextStream&)[m[K’ is deprecated: Use Qt::endl [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   53 | fault-settings  Run cool-retro-term with the default settings" << [01;35m[Kendl[m[K;
+      |                                                                   [01;35m[K^~~~[m[K
+
+In file included from [01m[K/usr/include/qt5/QtCore/qdebug.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlprivate.h:68[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqml.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlengine.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlapplicationengine.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/QQmlApplicationEngine:1[m[K,
+                 from [01m[Kmain.cpp:1[m[K:
+[01m[K/usr/include/qt5/QtCore/qtextstream.h:293:75:[m[K [01;36m[Knote: [m[Kdeclared here
+  293 | QT_DEPRECATED_VERSION_X(5, 15, "Use Qt::endl") QTextStream &[01;36m[Kendl[m[K(QTextStream &s);
+      |                                                             [01;36m[K^~~~[m[K
+
+[01m[Kmain.cpp:54:78:[m[K [01;35m[Kwarning: [m[K‘[01m[KQTextStream& QTextStreamFunctions::endl(QTextStream&)[m[K’ is deprecated: Use Qt::endl [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   54 | t << "  --workdir <dir>     Change working directory to 'dir'" << [01;35m[Kendl[m[K;
+      |                                                                   [01;35m[K^~~~[m[K
+
+In file included from [01m[K/usr/include/qt5/QtCore/qdebug.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlprivate.h:68[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqml.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlengine.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlapplicationengine.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/QQmlApplicationEngine:1[m[K,
+                 from [01m[Kmain.cpp:1[m[K:
+[01m[K/usr/include/qt5/QtCore/qtextstream.h:293:75:[m[K [01;36m[Knote: [m[Kdeclared here
+  293 | QT_DEPRECATED_VERSION_X(5, 15, "Use Qt::endl") QTextStream &[01;36m[Kendl[m[K(QTextStream &s);
+      |                                                             [01;36m[K^~~~[m[K
+
+[01m[Kmain.cpp:54:78:[m[K [01;35m[Kwarning: [m[K‘[01m[KQTextStream& QTextStreamFunctions::endl(QTextStream&)[m[K’ is deprecated: Use Qt::endl [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   54 | t << "  --workdir <dir>     Change working directory to 'dir'" << [01;35m[Kendl[m[K;
+      |                                                                   [01;35m[K^~~~[m[K
+
+In file included from [01m[K/usr/include/qt5/QtCore/qdebug.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlprivate.h:68[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqml.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlengine.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlapplicationengine.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/QQmlApplicationEngine:1[m[K,
+                 from [01m[Kmain.cpp:1[m[K:
+[01m[K/usr/include/qt5/QtCore/qtextstream.h:293:75:[m[K [01;36m[Knote: [m[Kdeclared here
+  293 | QT_DEPRECATED_VERSION_X(5, 15, "Use Qt::endl") QTextStream &[01;36m[Kendl[m[K(QTextStream &s);
+      |                                                             [01;36m[K^~~~[m[K
+
+[01m[Kmain.cpp:55:142:[m[K [01;35m[Kwarning: [m[K‘[01m[KQTextStream& QTextStreamFunctions::endl(QTextStream&)[m[K’ is deprecated: Use Qt::endl [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   55 |  catch all following arguments, so use it as the last option." << [01;35m[Kendl[m[K;
+      |                                                                   [01;35m[K^~~~[m[K
+
+In file included from [01m[K/usr/include/qt5/QtCore/qdebug.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlprivate.h:68[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqml.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlengine.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlapplicationengine.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/QQmlApplicationEngine:1[m[K,
+                 from [01m[Kmain.cpp:1[m[K:
+[01m[K/usr/include/qt5/QtCore/qtextstream.h:293:75:[m[K [01;36m[Knote: [m[Kdeclared here
+  293 | QT_DEPRECATED_VERSION_X(5, 15, "Use Qt::endl") QTextStream &[01;36m[Kendl[m[K(QTextStream &s);
+      |                                                             [01;36m[K^~~~[m[K
+
+[01m[Kmain.cpp:55:142:[m[K [01;35m[Kwarning: [m[K‘[01m[KQTextStream& QTextStreamFunctions::endl(QTextStream&)[m[K’ is deprecated: Use Qt::endl [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   55 |  catch all following arguments, so use it as the last option." << [01;35m[Kendl[m[K;
+      |                                                                   [01;35m[K^~~~[m[K
+
+In file included from [01m[K/usr/include/qt5/QtCore/qdebug.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlprivate.h:68[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqml.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlengine.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlapplicationengine.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/QQmlApplicationEngine:1[m[K,
+                 from [01m[Kmain.cpp:1[m[K:
+[01m[K/usr/include/qt5/QtCore/qtextstream.h:293:75:[m[K [01;36m[Knote: [m[Kdeclared here
+  293 | QT_DEPRECATED_VERSION_X(5, 15, "Use Qt::endl") QTextStream &[01;36m[Kendl[m[K(QTextStream &s);
+      |                                                             [01;36m[K^~~~[m[K
+
+[01m[Kmain.cpp:56:73:[m[K [01;35m[Kwarning: [m[K‘[01m[KQTextStream& QTextStreamFunctions::endl(QTextStream&)[m[K’ is deprecated: Use Qt::endl [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   56 |   cout << "  -T <title>          Set window title to 'title'." << [01;35m[Kendl[m[K;
+      |                                                                   [01;35m[K^~~~[m[K
+
+In file included from [01m[K/usr/include/qt5/QtCore/qdebug.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlprivate.h:68[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqml.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlengine.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlapplicationengine.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/QQmlApplicationEngine:1[m[K,
+                 from [01m[Kmain.cpp:1[m[K:
+[01m[K/usr/include/qt5/QtCore/qtextstream.h:293:75:[m[K [01;36m[Knote: [m[Kdeclared here
+  293 | QT_DEPRECATED_VERSION_X(5, 15, "Use Qt::endl") QTextStream &[01;36m[Kendl[m[K(QTextStream &s);
+      |                                                             [01;36m[K^~~~[m[K
+
+[01m[Kmain.cpp:56:73:[m[K [01;35m[Kwarning: [m[K‘[01m[KQTextStream& QTextStreamFunctions::endl(QTextStream&)[m[K’ is deprecated: Use Qt::endl [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   56 |   cout << "  -T <title>          Set window title to 'title'." << [01;35m[Kendl[m[K;
+      |                                                                   [01;35m[K^~~~[m[K
+
+In file included from [01m[K/usr/include/qt5/QtCore/qdebug.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlprivate.h:68[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqml.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlengine.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlapplicationengine.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/QQmlApplicationEngine:1[m[K,
+                 from [01m[Kmain.cpp:1[m[K:
+[01m[K/usr/include/qt5/QtCore/qtextstream.h:293:75:[m[K [01;36m[Knote: [m[Kdeclared here
+  293 | QT_DEPRECATED_VERSION_X(5, 15, "Use Qt::endl") QTextStream &[01;36m[Kendl[m[K(QTextStream &s);
+      |                                                             [01;36m[K^~~~[m[K
+
+[01m[Kmain.cpp:57:79:[m[K [01;35m[Kwarning: [m[K‘[01m[KQTextStream& QTextStreamFunctions::endl(QTextStream&)[m[K’ is deprecated: Use Qt::endl [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   57 |  << "  --fullscreen        Run cool-retro-term in fullscreen." << [01;35m[Kendl[m[K;
+      |                                                                   [01;35m[K^~~~[m[K
+
+In file included from [01m[K/usr/include/qt5/QtCore/qdebug.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlprivate.h:68[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqml.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlengine.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlapplicationengine.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/QQmlApplicationEngine:1[m[K,
+                 from [01m[Kmain.cpp:1[m[K:
+[01m[K/usr/include/qt5/QtCore/qtextstream.h:293:75:[m[K [01;36m[Knote: [m[Kdeclared here
+  293 | QT_DEPRECATED_VERSION_X(5, 15, "Use Qt::endl") QTextStream &[01;36m[Kendl[m[K(QTextStream &s);
+      |                                                             [01;36m[K^~~~[m[K
+
+[01m[Kmain.cpp:57:79:[m[K [01;35m[Kwarning: [m[K‘[01m[KQTextStream& QTextStreamFunctions::endl(QTextStream&)[m[K’ is deprecated: Use Qt::endl [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   57 |  << "  --fullscreen        Run cool-retro-term in fullscreen." << [01;35m[Kendl[m[K;
+      |                                                                   [01;35m[K^~~~[m[K
+
+In file included from [01m[K/usr/include/qt5/QtCore/qdebug.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlprivate.h:68[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqml.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlengine.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlapplicationengine.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/QQmlApplicationEngine:1[m[K,
+                 from [01m[Kmain.cpp:1[m[K:
+[01m[K/usr/include/qt5/QtCore/qtextstream.h:293:75:[m[K [01;36m[Knote: [m[Kdeclared here
+  293 | QT_DEPRECATED_VERSION_X(5, 15, "Use Qt::endl") QTextStream &[01;36m[Kendl[m[K(QTextStream &s);
+      |                                                             [01;36m[K^~~~[m[K
+
+[01m[Kmain.cpp:58:88:[m[K [01;35m[Kwarning: [m[K‘[01m[KQTextStream& QTextStreamFunctions::endl(QTextStream&)[m[K’ is deprecated: Use Qt::endl [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   58 | |--profile <prof> Run cool-retro-term with the given profile." << [01;35m[Kendl[m[K;
+      |                                                                   [01;35m[K^~~~[m[K
+
+In file included from [01m[K/usr/include/qt5/QtCore/qdebug.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlprivate.h:68[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqml.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlengine.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlapplicationengine.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/QQmlApplicationEngine:1[m[K,
+                 from [01m[Kmain.cpp:1[m[K:
+[01m[K/usr/include/qt5/QtCore/qtextstream.h:293:75:[m[K [01;36m[Knote: [m[Kdeclared here
+  293 | QT_DEPRECATED_VERSION_X(5, 15, "Use Qt::endl") QTextStream &[01;36m[Kendl[m[K(QTextStream &s);
+      |                                                             [01;36m[K^~~~[m[K
+
+[01m[Kmain.cpp:58:88:[m[K [01;35m[Kwarning: [m[K‘[01m[KQTextStream& QTextStreamFunctions::endl(QTextStream&)[m[K’ is deprecated: Use Qt::endl [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   58 | |--profile <prof> Run cool-retro-term with the given profile." << [01;35m[Kendl[m[K;
+      |                                                                   [01;35m[K^~~~[m[K
+
+In file included from [01m[K/usr/include/qt5/QtCore/qdebug.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlprivate.h:68[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqml.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlengine.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlapplicationengine.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/QQmlApplicationEngine:1[m[K,
+                 from [01m[Kmain.cpp:1[m[K:
+[01m[K/usr/include/qt5/QtCore/qtextstream.h:293:75:[m[K [01;36m[Knote: [m[Kdeclared here
+  293 | QT_DEPRECATED_VERSION_X(5, 15, "Use Qt::endl") QTextStream &[01;36m[Kendl[m[K(QTextStream &s);
+      |                                                             [01;36m[K^~~~[m[K
+
+[01m[Kmain.cpp:59:61:[m[K [01;35m[Kwarning: [m[K‘[01m[KQTextStream& QTextStreamFunctions::endl(QTextStream&)[m[K’ is deprecated: Use Qt::endl [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   59 |         cout << "  -h|--help           Print this help." << [01;35m[Kendl[m[K;
+      |                                                             [01;35m[K^~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qdebug.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlprivate.h:68[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqml.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlengine.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlapplicationengine.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/QQmlApplicationEngine:1[m[K,
+                 from [01m[Kmain.cpp:1[m[K:
+[01m[K/usr/include/qt5/QtCore/qtextstream.h:293:75:[m[K [01;36m[Knote: [m[Kdeclared here
+  293 | QT_DEPRECATED_VERSION_X(5, 15, "Use Qt::endl") QTextStream &[01;36m[Kendl[m[K(QTextStream &s);
+      |                                                             [01;36m[K^~~~[m[K
+
+[01m[Kmain.cpp:59:61:[m[K [01;35m[Kwarning: [m[K‘[01m[KQTextStream& QTextStreamFunctions::endl(QTextStream&)[m[K’ is deprecated: Use Qt::endl [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   59 |         cout << "  -h|--help           Print this help." << [01;35m[Kendl[m[K;
+      |                                                             [01;35m[K^~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qdebug.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlprivate.h:68[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqml.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlengine.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlapplicationengine.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/QQmlApplicationEngine:1[m[K,
+                 from [01m[Kmain.cpp:1[m[K:
+[01m[K/usr/include/qt5/QtCore/qtextstream.h:293:75:[m[K [01;36m[Knote: [m[Kdeclared here
+  293 | QT_DEPRECATED_VERSION_X(5, 15, "Use Qt::endl") QTextStream &[01;36m[Kendl[m[K(QTextStream &s);
+      |                                                             [01;36m[K^~~~[m[K
+
+[01m[Kmain.cpp:60:104:[m[K [01;35m[Kwarning: [m[K‘[01m[KQTextStream& QTextStreamFunctions::endl(QTextStream&)[m[K’ is deprecated: Use Qt::endl [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   60 |   Print additional information such as profiles and settings." << [01;35m[Kendl[m[K;
+      |                                                                   [01;35m[K^~~~[m[K
+
+In file included from [01m[K/usr/include/qt5/QtCore/qdebug.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlprivate.h:68[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqml.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlengine.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlapplicationengine.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/QQmlApplicationEngine:1[m[K,
+                 from [01m[Kmain.cpp:1[m[K:
+[01m[K/usr/include/qt5/QtCore/qtextstream.h:293:75:[m[K [01;36m[Knote: [m[Kdeclared here
+  293 | QT_DEPRECATED_VERSION_X(5, 15, "Use Qt::endl") QTextStream &[01;36m[Kendl[m[K(QTextStream &s);
+      |                                                             [01;36m[K^~~~[m[K
+
+[01m[Kmain.cpp:60:104:[m[K [01;35m[Kwarning: [m[K‘[01m[KQTextStream& QTextStreamFunctions::endl(QTextStream&)[m[K’ is deprecated: Use Qt::endl [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   60 |   Print additional information such as profiles and settings." << [01;35m[Kendl[m[K;
+      |                                                                   [01;35m[K^~~~[m[K
+
+In file included from [01m[K/usr/include/qt5/QtCore/qdebug.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlprivate.h:68[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqml.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlengine.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlapplicationengine.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/QQmlApplicationEngine:1[m[K,
+                 from [01m[Kmain.cpp:1[m[K:
+[01m[K/usr/include/qt5/QtCore/qtextstream.h:293:75:[m[K [01;36m[Knote: [m[Kdeclared here
+  293 | QT_DEPRECATED_VERSION_X(5, 15, "Use Qt::endl") QTextStream &[01;36m[Kendl[m[K(QTextStream &s);
+      |                                                             [01;36m[K^~~~[m[K
+
+[01m[Kmain.cpp:68:53:[m[K [01;35m[Kwarning: [m[K‘[01m[KQTextStream& QTextStreamFunctions::endl(QTextStream&)[m[K’ is deprecated: Use Qt::endl [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   68 |         cout << "cool-retro-term " << appVersion << [01;35m[Kendl[m[K;
+      |                                                     [01;35m[K^~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qdebug.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlprivate.h:68[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqml.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlengine.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlapplicationengine.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/QQmlApplicationEngine:1[m[K,
+                 from [01m[Kmain.cpp:1[m[K:
+[01m[K/usr/include/qt5/QtCore/qtextstream.h:293:75:[m[K [01;36m[Knote: [m[Kdeclared here
+  293 | QT_DEPRECATED_VERSION_X(5, 15, "Use Qt::endl") QTextStream &[01;36m[Kendl[m[K(QTextStream &s);
+      |                                                             [01;36m[K^~~~[m[K
+
+[01m[Kmain.cpp:68:53:[m[K [01;35m[Kwarning: [m[K‘[01m[KQTextStream& QTextStreamFunctions::endl(QTextStream&)[m[K’ is deprecated: Use Qt::endl [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   68 |         cout << "cool-retro-term " << appVersion << [01;35m[Kendl[m[K;
+      |                                                     [01;35m[K^~~~[m[K
+In file included from [01m[K/usr/include/qt5/QtCore/qdebug.h:49[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlprivate.h:68[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqml.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlengine.h:47[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/qqmlapplicationengine.h:43[m[K,
+                 from [01m[K/usr/include/qt5/QtQml/QQmlApplicationEngine:1[m[K,
+                 from [01m[Kmain.cpp:1[m[K:
+[01m[K/usr/include/qt5/QtCore/qtextstream.h:293:75:[m[K [01;36m[Knote: [m[Kdeclared here
+  293 | QT_DEPRECATED_VERSION_X(5, 15, "Use Qt::endl") QTextStream &[01;36m[Kendl[m[K(QTextStream &s);
+      |                                                             [01;36m[K^~~~[m[K
+
+x86_64-pc-linux-gnu-g++ -Wl,-O1 -Wl,--as-needed -Wl,-rpath-link,/usr/lib64 -o ../../cool-retro-term-1.2.0/cool-retro-term main.o fileio.o monospacefontmanager.o qrc_resources.o moc_fileio.o moc_monospacefontmanager.o   /usr/lib64/libQt5QuickControls2.so /usr/lib64/libQt5Quick.so /usr/lib64/libQt5Widgets.so /usr/lib64/libQt5Gui.so /usr/lib64/libQt5QmlModels.so /usr/lib64/libQt5Qml.so /usr/lib64/libQt5Network.so /usr/lib64/libQt5Sql.so /usr/lib64/libQt5Core.so -lGL -lpthread   
+make[1]: Leaving directory '/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/app'
+>>> Source compiled.
+>>> Test phase [not enabled]: x11-terms/cool-retro-term-1.2.0
+
+>>> Install x11-terms/cool-retro-term-1.2.0 into /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/image
+make -j8 
+cd qmltermwidget/ && ( test -e Makefile || /usr/lib64/qt5/bin/qmake -o Makefile /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/qmltermwidget.pro 'QMAKE_AR=x86_64-pc-linux-gnu-ar cqs' QMAKE_CC=x86_64-pc-linux-gnu-gcc QMAKE_LINK_C=x86_64-pc-linux-gnu-gcc QMAKE_LINK_C_SHLIB=x86_64-pc-linux-gnu-gcc QMAKE_CXX=x86_64-pc-linux-gnu-g++ QMAKE_LINK=x86_64-pc-linux-gnu-g++ QMAKE_LINK_SHLIB=x86_64-pc-linux-gnu-g++ QMAKE_OBJCOPY=x86_64-pc-linux-gnu-objcopy QMAKE_RANLIB= QMAKE_STRIP= 'QMAKE_CFLAGS=-march=haswell -O2 -pipe' QMAKE_CFLAGS_RELEASE= QMAKE_CFLAGS_DEBUG= 'QMAKE_CXXFLAGS=-march=haswell -O2 -pipe' QMAKE_CXXFLAGS_RELEASE= QMAKE_CXXFLAGS_DEBUG= 'QMAKE_LFLAGS=-Wl,-O1 -Wl,--as-needed' QMAKE_LFLAGS_RELEASE= QMAKE_LFLAGS_DEBUG= PREFIX=/usr ) && make -f Makefile 
+make[1]: Entering directory '/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget'
+make[1]: Nothing to be done for 'first'.
+make[1]: Leaving directory '/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget'
+cd app/ && ( test -e Makefile || /usr/lib64/qt5/bin/qmake -o Makefile /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/app/app.pro 'QMAKE_AR=x86_64-pc-linux-gnu-ar cqs' QMAKE_CC=x86_64-pc-linux-gnu-gcc QMAKE_LINK_C=x86_64-pc-linux-gnu-gcc QMAKE_LINK_C_SHLIB=x86_64-pc-linux-gnu-gcc QMAKE_CXX=x86_64-pc-linux-gnu-g++ QMAKE_LINK=x86_64-pc-linux-gnu-g++ QMAKE_LINK_SHLIB=x86_64-pc-linux-gnu-g++ QMAKE_OBJCOPY=x86_64-pc-linux-gnu-objcopy QMAKE_RANLIB= QMAKE_STRIP= 'QMAKE_CFLAGS=-march=haswell -O2 -pipe' QMAKE_CFLAGS_RELEASE= QMAKE_CFLAGS_DEBUG= 'QMAKE_CXXFLAGS=-march=haswell -O2 -pipe' QMAKE_CXXFLAGS_RELEASE= QMAKE_CXXFLAGS_DEBUG= 'QMAKE_LFLAGS=-Wl,-O1 -Wl,--as-needed' QMAKE_LFLAGS_RELEASE= QMAKE_LFLAGS_DEBUG= PREFIX=/usr ) && make -f Makefile 
+make[1]: Entering directory '/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/app'
+make[1]: Nothing to be done for 'first'.
+make[1]: Leaving directory '/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/app'
+make -j8 INSTALL_ROOT= install 
+cd qmltermwidget/ && ( test -e Makefile || /usr/lib64/qt5/bin/qmake -o Makefile /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget/qmltermwidget.pro 'QMAKE_AR=x86_64-pc-linux-gnu-ar cqs' QMAKE_CC=x86_64-pc-linux-gnu-gcc QMAKE_LINK_C=x86_64-pc-linux-gnu-gcc QMAKE_LINK_C_SHLIB=x86_64-pc-linux-gnu-gcc QMAKE_CXX=x86_64-pc-linux-gnu-g++ QMAKE_LINK=x86_64-pc-linux-gnu-g++ QMAKE_LINK_SHLIB=x86_64-pc-linux-gnu-g++ QMAKE_OBJCOPY=x86_64-pc-linux-gnu-objcopy QMAKE_RANLIB= QMAKE_STRIP= 'QMAKE_CFLAGS=-march=haswell -O2 -pipe' QMAKE_CFLAGS_RELEASE= QMAKE_CFLAGS_DEBUG= 'QMAKE_CXXFLAGS=-march=haswell -O2 -pipe' QMAKE_CXXFLAGS_RELEASE= QMAKE_CXXFLAGS_DEBUG= 'QMAKE_LFLAGS=-Wl,-O1 -Wl,--as-needed' QMAKE_LFLAGS_RELEASE= QMAKE_LFLAGS_DEBUG= PREFIX=/usr ) && make -f Makefile install
+/usr/lib64/qt5/bin/qmake -install qinstall /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/cool-retro-term.desktop /usr/share/applications/cool-retro-term.desktop
+ * ACCESS DENIED:  open_wr:      /usr/share/applications
+ * ACCESS DENIED:  linkat:       /usr/share/applications/cool-retro-term.desktop
+Error copying /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/cool-retro-term.desktop to /usr/share/applications/cool-retro-term.desktop: Cannot create /usr/share/applications/cool-retro-term.desktop for output
+make: *** [Makefile:340: install_desktop] Error 3
+make: *** Waiting for unfinished jobs....
+make[1]: Entering directory '/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget'
+ * ACCESS DENIED:  mkdir:        /usr/lib64/qt5/qml/QMLTermWidget
+mkdir: cannot create directory ‘/usr/lib64/qt5/qml/QMLTermWidget’: Permission denied
+make[1]: *** [Makefile:917: install_target] Error 1
+make[1]: *** Waiting for unfinished jobs....
+ * ACCESS DENIED:  mkdir:        /usr/lib64/qt5/qml/QMLTermWidget
+mkdir: cannot create directory ‘/usr/lib64/qt5/qml/QMLTermWidget’: Permission denied
+make[1]: *** [Makefile:926: install_qmldir] Error 1
+ * ACCESS DENIED:  mkdir:        /usr/lib64/qt5/qml/QMLTermWidget
+mkdir: cannot create directory ‘/usr/lib64/qt5/qml/QMLTermWidget’: Permission denied
+make[1]: *** [Makefile:935: install_assets] Error 1
+make[1]: Leaving directory '/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/qmltermwidget'
+make: *** [Makefile:72: sub-qmltermwidget-install_subtargets-ordered] Error 2
+ * ERROR: x11-terms/cool-retro-term-1.2.0::thamognya-overlay failed (install phase):
+ *   emake failed
+ * 
+ * If you need support, post the output of `emerge --info '=x11-terms/cool-retro-term-1.2.0::thamognya-overlay'`,
+ * the complete build log and the output of `emerge -pqv '=x11-terms/cool-retro-term-1.2.0::thamognya-overlay'`.
+ * The complete build log is located at '/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/temp/build.log'.
+ * The ebuild environment file is located at '/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/temp/environment'.
+ * Working directory: '/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0'
+ * S: '/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0'
+ * --------------------------- ACCESS VIOLATION SUMMARY ---------------------------
+ * LOG FILE: "/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/temp/sandbox.log"
+ * 
+VERSION 1.0
+FORMAT: F - Function called
+FORMAT: S - Access Status
+FORMAT: P - Path as passed to function
+FORMAT: A - Absolute Path (not canonical)
+FORMAT: R - Canonical Path
+FORMAT: C - Command Line
+
+F: open_wr
+S: deny
+P: /usr/share/applications
+A: /usr/share/applications
+R: /usr/share/applications
+C: /usr/lib64/qt5/bin/qmake -install qinstall /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/cool-retro-term.desktop /usr/share/applications/cool-retro-term.desktop 
+
+F: linkat
+S: deny
+P: /usr/share/applications/cool-retro-term.desktop
+A: /usr/share/applications/cool-retro-term.desktop
+R: /usr/share/applications/cool-retro-term.desktop
+C: /usr/lib64/qt5/bin/qmake -install qinstall /var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0/cool-retro-term.desktop /usr/share/applications/cool-retro-term.desktop 
+
+F: mkdir
+S: deny
+P: QMLTermWidget
+A: /usr/lib64/qt5/qml/QMLTermWidget
+R: /usr/lib64/qt5/qml/QMLTermWidget
+C: mkdir -p /usr/lib64/qt5/qml/QMLTermWidget 
+
+F: mkdir
+S: deny
+P: QMLTermWidget
+A: /usr/lib64/qt5/qml/QMLTermWidget
+R: /usr/lib64/qt5/qml/QMLTermWidget
+C: mkdir -p /usr/lib64/qt5/qml/QMLTermWidget 
+
+F: mkdir
+S: deny
+P: QMLTermWidget
+A: /usr/lib64/qt5/qml/QMLTermWidget
+R: /usr/lib64/qt5/qml/QMLTermWidget
+C: mkdir -p /usr/lib64/qt5/qml/QMLTermWidget 
+ * --------------------------------------------------------------------------------
+
+>>> Failed to emerge x11-terms/cool-retro-term-1.2.0, Log file:
+
+>>>  '/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/temp/build.log'
+ * Messages for package x11-terms/cool-retro-term-1.2.0:
+ * ERROR: x11-terms/cool-retro-term-1.2.0::thamognya-overlay failed (install phase):
+ *   emake failed
+ * 
+ * If you need support, post the output of `emerge --info '=x11-terms/cool-retro-term-1.2.0::thamognya-overlay'`,
+ * the complete build log and the output of `emerge -pqv '=x11-terms/cool-retro-term-1.2.0::thamognya-overlay'`.
+ * The complete build log is located at '/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/temp/build.log'.
+ * The ebuild environment file is located at '/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/temp/environment'.
+ * Working directory: '/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0'
+ * S: '/var/tmp/portage/x11-terms/cool-retro-term-1.2.0/work/cool-retro-term-1.2.0'
+
+
