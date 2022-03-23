@@ -1,0 +1,35 @@
+Fixes the issue of 
+
+QQmlApplicationEngine failed to load component
+qrc:/main.qml:143:5: Type TerminalContainer unavailable
+qrc:/TerminalContainer.qml:47:5: Type PreprocessedTerminal unavailable
+qrc:/PreprocessedTerminal.qml:123:9: Cannot assign to non-existent property "blinkingCursor"
+Cannot load QML interface
+
+With the solution mentioned in github issue #592 of Swordfish90/cool-retro-term
+
+This is because using INSTALL_DIR copies the stuff to /usr/bin/cool-retro-term and /usr/... which creates an issue for cool-retro-term as mentioned above.
+
+This patch is not a replacement for better packaging and more official documentation on the matter.
+
+Signed-off-by: Thamognya Kodi <contact@thamognya.com>
+
+--- ./Makefile	2022-03-23 18:37:14.973380746 +0700
++++ ../Makefile	2022-03-23 18:31:16.893364148 +0700
+@@ -365,3 +365,16 @@
+ 	@test -d app/ || mkdir -p app/
+ 	cd app/ && ( test -e Makefile || $(QMAKE) -o Makefile /home/jeff/Downloads/cool-retro-term/app/app.pro ) && $(MAKE) -e -f Makefile distdir DISTDIR=$(DISTDIR)/app
+ 
++.PHONY: true-install
++true-install:
++	mkdir -p "$(TRUE-INSTALL-DIR)/qmltermwidget/src/" && cp -r ./qmltermwidget/src/qmldir "$(TRUE-INSTALL-DIR)/qmltermwidget/src/qmldir"
++	mkdir -p "$(TRUE-INSTALL-DIR)/qmltermwidget/lib/" && cp -r ./qmltermwidget/lib/kb-layouts "$(TRUE-INSTALL-DIR)/qmltermwidget/lib/kb-layouts"
++	mkdir -p "$(TRUE-INSTALL-DIR)/qmltermwidget/lib/" && cp -r ./qmltermwidget/lib/color-schemes "$(TRUE-INSTALL-DIR)/qmltermwidget/lib/color-schemes"
++	mkdir -p "$(TRUE-INSTALL-DIR)/qmltermwidget/src/" && cp -r ./qmltermwidget/src/QMLTermScrollbar.qml "$(TRUE-INSTALL-DIR)/qmltermwidget/src/QMLTermScrollbar.qml"
++	mkdir -p "$(TRUE-INSTALL-DIR)/qmltermwidget/" && cp -r ./qmltermwidget/QMLTermWidget "$(TRUE-INSTALL-DIR)/qmltermwidget/QMLTermWidget"
++	cp -r ./cool-retro-term $(TRUE-INSTALL-DIR)
++
++.PHONY: true-delete
++true-delete:
++	rm -rf $(TRUE-INSTALL-DIR)/qmltermwidget 
++	rm -rf $(TRUE-INSTALL-DIR)/cool-retro-term

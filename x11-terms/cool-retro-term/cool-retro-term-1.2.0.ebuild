@@ -41,11 +41,12 @@ src_prepare() {
 
 src_configure() {
 	eqmake5 PREFIX="${EPREFIX}/usr"
+	eapply "${FILESDIR}"/makefile-install-1.2.0.patch
 }
 
 src_install() {
 	emake
-	emake INSTALL_DIR ${PN} ${D}
+	emake TRUE-INSTALL-DIR="" true-install
 	einstalldocs
 	doman packaging/debian/cool-retro-term.1
 }
@@ -56,6 +57,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
+	emake TRUE-INSTALL-DIR="${D}" true-delete
 	xdg_icon_cache_update
 	xdg_desktop_database_update
 }
