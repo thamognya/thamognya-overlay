@@ -10,7 +10,7 @@ This is my overlay with packages I write and test before making a pr to gentoo/g
 
 #### Eselect
 
-`eselect repository thamognya`
+`eselect repository add thamognya`
 
 #### Layman
 
