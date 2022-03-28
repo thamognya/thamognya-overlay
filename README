@@ -25,7 +25,12 @@ This is my overlay with packages I write and test before making a pr to gentoo/g
 - `app-emulation/spice-protocol`
 - `app-misc/yaf`
 - `mail-client/alot`
+- `net-misc/mangaflix`
 
-# Todo
+# Licenses
 
-- add to layman
+This work is dual-licensed under MIT and GPL 3.0 (or any later version). You have to comply to both of them if you want to use this work.
+
+`SPDX-License-Identifier: MIT AND GPL-3.0-or-later`
+
+You can find the licenses in the licenses folder.
