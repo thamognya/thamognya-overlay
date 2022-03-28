@@ -27,6 +27,10 @@ This is my overlay with packages I write and test before making a pr to gentoo/g
 - `mail-client/alot`
 - `net-misc/mangaflix`
 
+# feed
+
+https://github.com/ThamognyaKodi/thamognya-overlay/commits/master.atom
+
 # Licenses
 
 This work is dual-licensed under MIT and GPL 3.0 (or any later version). You have to comply to both of them if you want to use this work.
