@@ -6,9 +6,9 @@
 		<name>Thamognya Kodi</name>
 	</maintainer>
 	<longdescription lang="en">
-        Mangaflix is a cli tool written in posix shell to download and display mangas from Manganato.
+        SpotiFetch is a simple fetch tool to display info about your Spotify profile using the spotify API.
 	</longdescription>
 	<upstream>
-		<remote-id type="github">ThamognyaKodi/MangaFlix</remote-id>
+		<remote-id type="github">ZenithDS/SpotiFetch</remote-id>
 	</upstream>
 </pkgmetadata>
