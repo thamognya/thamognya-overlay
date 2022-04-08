@@ -3,8 +3,8 @@
 
 EAPI=8
 
-DESCRIPTION="terminal emulator which mimics the look and feel of the old cathode tube screens"
-HOMEPAGE="https://github.com/Swordfish90/cool-retro-term"
+DESCRIPTION="A quite powerful window manager for X"
+HOMEPAGE="https://github.com/ssleert/qpwm/"
 
 
 if [[ ${PV} == *9999 ]]; then
