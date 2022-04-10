@@ -1,4 +1,4 @@
-*** Use with caution, as this overlay is under development. No gurantees are provided, but there are a few safe packages (only for amd64) that I have listed below ***
+# *** Use with caution, as this overlay is under development. No gurantees are provided, but there are a few safe packages (only for amd64) that I have listed below ***
 
 # Thamognya Overlay
 
@@ -26,11 +26,16 @@ This is my overlay with packages I write and test before making a pr to gentoo/g
 - `app-misc/yaf`
 - `mail-client/alot`
 - `net-misc/mangaflix`
+- `x11-wm/qpwm`
 
 ### Packages that work but need updating
 
 - `acct-group/nordvpn`
 - `net-vpn/nordvpn`
+
+### Packages I am working on
+
+- `app-containers/docker-compose`
 
 # feed
 
