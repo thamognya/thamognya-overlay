@@ -27,6 +27,7 @@ This is my overlay with packages I write and test before making a pr to gentoo/g
 - `mail-client/alot`
 - `net-misc/mangaflix`
 - `x11-wm/qpwm`
+- `app-admin/doas`
 
 ### Packages that work but need updating
 
