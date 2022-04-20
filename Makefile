@@ -1,5 +1,5 @@
 .PHONY: overlay-update
-update-overlay:
+overlay-update:
 	git add .
 	git commit -m 'auto update: ebuilds update'
 	git remote | xargs -L1 git push --all
