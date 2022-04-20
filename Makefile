@@ -25,10 +25,7 @@ metadata-update:
 .PHONY: orphan-update
 orphan-update:
 	portageq --orphaned > ./orphaned_packages/orphaned_packages.txt
-	git add .
-	git commit -m 'auto update: orphaned packages update'
-	git remote | xargs -L1 git push --all
 	qlist -Iv $(portageq --repo gentoo --orphaned) > ./orphaned_packages/installed_orphaned_packages.txt
 	git add .
-	git commit -m 'auto update: installed orphaned packages update'
+	git commit -m 'auto update: orphaned packages update'
 	git remote | xargs -L1 git push --all
