@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>contact@thamognya.com</email>
+		<name>Thamognya Kodi</name>
+		<description>Primary maintainer</description>
+	</maintainer>
+	<longdescription lang="en">
+        draw is an simple drawing tool in the terminal. Hold your mouse down and move it across the screen to draw anything you want!
+	</longdescription>
+	<upstream>
+		<remote-id type="github">maaslalani/draw</remote-id>
+	</upstream>
+</pkgmetadata>
