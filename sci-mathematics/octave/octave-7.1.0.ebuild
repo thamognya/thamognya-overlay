@@ -16,12 +16,6 @@ IUSE="curl doc fftw +glpk gnuplot gui hdf5 java opengl
 	ssl static-libs sundials X zlib"
 KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~x86 ~amd64-linux ~x86-linux"
 
-# Although it is listed in INSTALL.OCTAVE as a build tool, Octave runs
-# "makeinfo" from sys-apps/texinfo at runtime to convert its texinfo
-# documentation to text (see scripts/help/help.m).
-#
-# (un)zip isn't mentioned, but there's a test that uses it (bug 775254).
-#
 RDEPEND="
 	app-arch/bzip2
 	app-arch/unzip
@@ -112,6 +106,8 @@ src_prepare() {
 
 	default
 	eautoreconf
+	# patch for unknown option 'qt' (bug #839285)
+	eapply "${FILESDIR}"/${P}-omit-qtchooser-qtver.patch
 }
 
 src_configure() {

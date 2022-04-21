@@ -112,6 +112,8 @@ src_prepare() {
 
 	default
 	eautoreconf
+	# patch for unknown option 'qt' (bug #839285)
+	eapply "${FILESDIR}"/${P}-omit-qtchooser-qtver.patch
 }
 
 src_configure() {
