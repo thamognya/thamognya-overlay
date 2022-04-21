@@ -16,28 +16,9 @@ This is my overlay with packages I write and test before making a pr to gentoo/g
 
 `layman -a thamognya`
 
-## Safe packages
+## packages
 
-- `sys-apps/fastfetch`
-- `net-p2p/qbittorrent`
-- `x11-terms/cool-retro-term`
-- `app-emulation/spice-vdagent`
-- `app-emulation/spice-protocol`
-- `app-misc/yaf`
-- `mail-client/alot`
-- `net-misc/mangaflix`
-- `x11-wm/qpwm`
-- `app-admin/doas`
-
-### Packages that work but need updating
-
-- `acct-group/nordvpn`
-- `net-vpn/nordvpn`
-- `sci-mathematics/octave` testing
-
-### Packages I am working on
-
-- `app-containers/docker-compose`
+I really reccomend you look at the ebuilds yourself before installing
 
 # feed
 
