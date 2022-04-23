@@ -6,9 +6,9 @@ EAPI=8
 inherit autotools flag-o-matic fortran-2 java-pkg-opt-2 pax-utils qmake-utils toolchain-funcs xdg-utils
 
 DESCRIPTION="High-level interactive language for numerical computations"
-LICENSE="GPL-3"
 HOMEPAGE="https://www.gnu.org/software/octave/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
+LICENSE="GPL-3"
 
 SLOT="0/${PV}"
 IUSE="curl doc fftw +glpk gnuplot gui hdf5 java opengl
@@ -16,12 +16,6 @@ IUSE="curl doc fftw +glpk gnuplot gui hdf5 java opengl
 	ssl static-libs sundials X zlib"
 KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~x86 ~amd64-linux ~x86-linux"
 
-# Although it is listed in INSTALL.OCTAVE as a build tool, Octave runs
-# "makeinfo" from sys-apps/texinfo at runtime to convert its texinfo
-# documentation to text (see scripts/help/help.m).
-#
-# (un)zip isn't mentioned, but there's a test that uses it (bug 775254).
-#
 RDEPEND="
 	app-arch/bzip2
 	app-arch/unzip
@@ -80,7 +74,7 @@ RDEPEND="
 	)
 	sundials? ( >=sci-libs/sundials-4:0= )
 	X? ( x11-libs/libX11:0= )"
-DEPEND="${RDEPEND}
+BDEPEND="${RDEPEND}
 	dev-util/gperf
 	virtual/pkgconfig
 	doc? (
@@ -111,9 +105,9 @@ src_prepare() {
 	rm doc/interpreter/contributors.texi || die
 
 	default
-	eautoreconf
 	# patch for unknown option 'qt' (bug #839285)
 	eapply "${FILESDIR}/${PN}-6.4.0-omit-qtchooser-qtver.patch"
+	eautoreconf
 }
 
 src_configure() {
