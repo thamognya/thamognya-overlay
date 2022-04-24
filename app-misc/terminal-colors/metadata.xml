@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer type="person" proxied="yes">
-		<email>contact@thamognya.com</email>
-		<name>Thamognya Kodi</name>
-	</maintainer>
-	<maintainer type="project" proxied="proxy">
-		<email>proxy-maint@gentoo.org</email>
-		<name>Proxy Maintainers</name>
-	</maintainer>
-	<longdescription lang="en">
-        A Utility to test color capabilities of terminal. 
-	</longdescription>
-	<upstream>
-		<remote-id type="github">eikenb/terminal-colors</remote-id>
-	</upstream>
+  <maintainer type="person" proxied="yes">
+    <name>Thamognya Kodi</name>
+    <email>contact@thamognya.com</email>
+  </maintainer>
+  <maintainer type="project" proxied="proxy">
+    <email>proxy-maint@gentoo.org</email>
+    <name>Proxy Maintainers</name>
+  </maintainer>
+  <upstream>
+    <remote-id type="github">eikenb/terminal-colors</remote-id>
+  </upstream>
 </pkgmetadata>

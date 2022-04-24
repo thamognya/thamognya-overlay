@@ -20,6 +20,5 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 RDEPEND="${PYTHON_DEPS}"
 
 src_install() {
-	mv "${P}/${PN}" "${S}" && rm -rf ${P}
 	python_foreach_impl python_newscript ${PN} ${PN}
 }
