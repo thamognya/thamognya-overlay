@@ -9,7 +9,7 @@ inherit python-r1
 
 DESCRIPTION="A tool to display color charts for 8, 16, 88, and 256 color terminals"
 HOMEPAGE="http://zhar.net/projects/shell/terminal-colors"
-SRC_URI="https://github.com/eikenb/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}tmp.tar.gz"
+SRC_URI="https://github.com/eikenb/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 S="${WORKDIR}"
 
 LICENSE="GPL-3+"
@@ -20,5 +20,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 RDEPEND="${PYTHON_DEPS}"
 
 src_install() {
+	mv "${S}/${P}/${PN}" "${S}" || die "moving the script failed"
+	rm -rf "${S}/${P}" || die "rm failed"
 	python_foreach_impl python_newscript ${PN} ${PN}
 }
