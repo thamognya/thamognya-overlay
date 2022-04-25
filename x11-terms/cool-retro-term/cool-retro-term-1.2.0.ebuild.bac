@@ -5,19 +5,19 @@ EAPI=8
 
 inherit qmake-utils xdg-utils
 
-QTW_PN=qmltermwidget
-QTW_PV=0.2.0
-QTW_P=${QTW_PN}-${QTW_PV}
+QTW_PN="qmltermwidget"
+QTW_PV="0.2.0"
+QTW_P="${QTW_PN}-${QTW_PV}"
 
 DESCRIPTION="terminal emulator which mimics the look and feel of the old cathode tube screens"
 HOMEPAGE="https://github.com/Swordfish90/cool-retro-term"
+
 SRC_URI="https://github.com/Swordfish90/cool-retro-term/archive/${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/Swordfish90/qmltermwidget/archive/${QTW_PV}.tar.gz -> ${QTW_P}.tar.gz"
+		https://github.com/Swordfish90/qmltermwidget/archive/${QTW_PV}.tar.gz -> ${QTW_P}.tar.gz"
 
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc64 ~x86"
-IUSE=""
 
 DEPEND="
 	dev-qt/qtdeclarative:5[localstorage]
@@ -32,26 +32,25 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	default
-
-	rmdir qmltermwidget || die
-	mv "${WORKDIR}/${QTW_P}" qmltermwidget || die
+	rmdir "${WORKDIR}/${P}/${QTW_PN}" || die
+	mv "${WORKDIR}/${QTW_P}" "${WORKDIR}/${P}/${QTW_PN}" || die
 	pushd qmltermwidget || die
 	eapply "${FILESDIR}"/qmltermwidget-0.2.0-gcc-10.patch
 	popd || die
 }
 
 src_configure() {
-	eqmake5
+	eqmake5 PREFIX="${EPREFIX}/usr"
 }
 
 src_install() {
 	emake
-	doman packaging/debian/cool-retro-term.1
-	cd ${S}
-	rm -rf "${S}/.*" "${S}/*.txt" "${S}/Makefile" "${S}/packaging/" "${S}/README.md" "${S}/snap/"
 }
 
 pkg_postinst() {
+	mv /usr/bin/usr/lib64/qt5/* /usr/lib64/qt5
+	mv /usr/bin/usr/share/applications/* /usr/share/applications
+	mv /usr/bin/usr/share/icons/* /usr/share/icons
 	xdg_icon_cache_update
 	xdg_desktop_database_update
 }
