@@ -9,18 +9,24 @@ inherit python-r1
 
 DESCRIPTION="A tool to display color charts for 8, 16, 88, and 256 color terminals"
 HOMEPAGE="http://zhar.net/projects/shell/terminal-colors"
-SRC_URI="https://github.com/eikenb/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
-S="${WORKDIR}"
+if [[ ${PV} == *9999 ]]; then
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/eikenb/terminal-colors.git"
+else
+	SRC_URI="https://github.com/eikenb/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="~amd64 ~x86 ~x64-macos"
+fi
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x64-macos"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}"
+BDEPEND="${PYTHON_DEPS}"
+
+src_compile() { :; }
 
 src_install() {
-	mv "${S}/${P}/${PN}" "${S}" || die "moving the script failed"
-	rm -rf "${S}/${P}" || die "rm failed"
 	python_foreach_impl python_newscript ${PN} ${PN}
+	einstalldocs
 }
