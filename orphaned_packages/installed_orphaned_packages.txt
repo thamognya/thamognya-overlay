@@ -5,6 +5,7 @@ acct-group/disk-0-r1
 acct-group/dnsmasq-0-r1
 acct-group/docker-0-r1
 acct-group/flatpak-0
+acct-group/git-0-r1
 acct-group/input-0-r1
 acct-group/kmem-0-r1
 acct-group/kvm-0-r1
@@ -32,6 +33,7 @@ acct-group/tty-0-r1
 acct-group/video-0-r1
 acct-user/dnsmasq-0-r1
 acct-user/flatpak-0
+acct-user/git-0-r2
 acct-user/man-1-r1
 acct-user/messagebus-0-r1
 acct-user/mpd-0-r1
