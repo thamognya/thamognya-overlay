@@ -1,4 +1,5 @@
 acct-group/audio-0-r1
+acct-group/avahi-0-r1
 acct-group/cdrom-0-r1
 acct-group/dialout-0-r1
 acct-group/disk-0-r1
@@ -15,6 +16,7 @@ acct-group/lpadmin-0-r1
 acct-group/mail-0-r1
 acct-group/man-0-r1
 acct-group/messagebus-0-r1
+acct-group/netdev-0-r1
 acct-group/nm-openvpn-0
 acct-group/nordvpn-0
 acct-group/nullmail-0
@@ -31,6 +33,7 @@ acct-group/sshd-0-r1
 acct-group/tape-0-r1
 acct-group/tty-0-r1
 acct-group/video-0-r1
+acct-user/avahi-0-r1
 acct-user/dnsmasq-0-r1
 acct-user/flatpak-0
 acct-user/git-0-r2
@@ -60,6 +63,7 @@ app-arch/cpio-2.12-r1
 app-arch/gzip-1.11
 app-arch/libarchive-3.6.0
 app-arch/lz4-1.9.3-r1
+app-arch/rpm-4.17.0-r2
 app-arch/rpm2targz-2021.03.16
 app-arch/snappy-1.1.9-r1
 app-arch/tar-1.34
@@ -84,6 +88,7 @@ app-crypt/libsecret-0.20.5
 app-crypt/p11-kit-0.23.22
 app-crypt/pinentry-1.2.0
 app-crypt/rhash-1.4.2
+app-doc/xmltoman-0.4-r1
 app-editors/nano-5.9
 app-editors/neovim-0.7.0
 app-editors/vim-8.2.4328-r1
@@ -120,10 +125,12 @@ app-eselect/eselect-vi-1.2
 app-eselect/eselect-wine-1.2.2
 app-eselect/eselect-wxwidgets-20180529
 app-i18n/uchardet-0.0.7
+app-laptop/laptop-mode-tools-1.74
 app-misc/c_rehash-1.7-r1
 app-misc/ca-certificates-20210119.3.66
 app-misc/cmatrix-2.0-r4
 app-misc/editor-wrapper-4-r1
+app-misc/figlet-2.2.5-r1
 app-misc/jq-1.7_pre20201109
 app-misc/mime-types-2.1.53
 app-misc/pax-utils-1.3.3
@@ -132,6 +139,7 @@ app-misc/scrub-2.6.1
 app-misc/terminal-colors-9999
 app-misc/tmux-3.2a
 app-misc/yaf-bin-0.0.3
+app-pda/libplist-2.2.0-r3
 app-portage/eix-0.36.1-r1
 app-portage/elt-patches-20211104
 app-portage/gemato-16.2
@@ -140,6 +148,7 @@ app-portage/layman-2.4.3
 app-portage/portage-utils-0.93.3
 app-portage/repoman-9999
 app-shells/bash-5.1_p16
+app-shells/fish-3.4.0
 app-shells/fzf-0.28.0
 app-shells/push-3.4-r1
 app-shells/quoter-4.2-r1
@@ -207,6 +216,7 @@ dev-lang/lua-5.1.5-r106
 dev-lang/luajit-2.0.5-r3
 dev-lang/mujs-1.2.0
 dev-lang/nasm-2.15.05
+dev-lang/ocaml-4.11.2-r2
 dev-lang/orc-0.4.31
 dev-lang/perl-5.34.0-r6
 dev-lang/python-3.10.2_p1
@@ -274,7 +284,7 @@ dev-libs/libmpack-1.0.5-r2
 dev-libs/libnatspec-0.3.0
 dev-libs/libnl-3.5.0
 dev-libs/libpcre-8.45-r1
-dev-libs/libpcre2-10.39-r1
+dev-libs/libpcre2-10.40
 dev-libs/libpipeline-1.5.5
 dev-libs/libsass-3.6.5
 dev-libs/libsigc++-2.10.7
@@ -318,6 +328,35 @@ dev-lua/LuaBitOp-1.0.2-r1
 dev-lua/luarocks-3.9.0
 dev-lua/luv-1.43.0.0
 dev-lua/mpack-1.0.9-r1
+dev-ml/camlbz2-0.7.0
+dev-ml/camlzip-1.10
+dev-ml/cmdliner-1.0.4
+dev-ml/cppo-1.6.7
+dev-ml/csexp-1.5.1
+dev-ml/cudf-0.9-r2
+dev-ml/dose3-6.1-r1
+dev-ml/dune-2.8.4
+dev-ml/dune-configurator-2.8.4
+dev-ml/dune-private-libs-2.8.4
+dev-ml/extlib-1.7.8
+dev-ml/findlib-1.8.1-r2
+dev-ml/graphics-5.1.2
+dev-ml/ocaml-base64-3.5.0
+dev-ml/ocaml-expat-1.1.0-r1
+dev-ml/ocamlbuild-0.14.0-r1
+dev-ml/ocamlgraph-2.0.0-r1
+dev-ml/opam-core-2.0.9
+dev-ml/opam-file-format-2.1.3
+dev-ml/opam-format-2.0.9
+dev-ml/opam-installer-2.0.9
+dev-ml/parmap-1.2.3
+dev-ml/re-1.9.0
+dev-ml/react-1.2.2
+dev-ml/result-1.5
+dev-ml/seq-0.2.2
+dev-ml/stdlib-shims-0.3.0
+dev-ml/topkg-1.0.3
+dev-ml/xml-light-2.2-r3
 dev-perl/Authen-SASL-2.160.0-r2
 dev-perl/B-Hooks-EndOfScope-0.240.0-r1
 dev-perl/Capture-Tiny-0.480.0-r1
@@ -606,6 +645,7 @@ dev-util/pkgconf-1.8.0-r1
 dev-util/pkgdev-0.1.9
 dev-util/ragel-7.0.4
 dev-util/re2c-2.1.1-r1
+dev-util/valgrind-3.18.1
 dev-util/wayland-scanner-1.20.0
 dev-util/xfce4-dev-tools-4.16.0
 dev-vcs/git-2.34.1
@@ -620,10 +660,12 @@ gui-libs/display-manager-init-1.0-r3
 lxde-base/lxappearance-0.6.3-r2
 mail-client/thunderbird-bin-91.7.0
 mail-mta/nullmailer-2.2-r2
+media-fonts/dejavu-2.37
 media-fonts/encodings-1.0.5-r1
 media-fonts/font-util-1.3.2-r1
 media-fonts/fontawesome-5.15.3
 media-fonts/liberation-fonts-2.1.3
+media-fonts/nerd-fonts-2.1.0
 media-fonts/urw-fonts-2.4.9
 media-gfx/exiv2-0.27.5-r1
 media-gfx/feh-3.7.2
@@ -655,9 +697,10 @@ media-libs/glew-2.2.0
 media-libs/glm-0.9.9.8-r1
 media-libs/glu-9.0.2
 media-libs/graphene-1.10.6-r1
-media-libs/gst-plugins-base-1.18.4-r1
+media-libs/gst-plugins-bad-1.20.2
+media-libs/gst-plugins-base-1.20.2
 media-libs/gst-plugins-good-1.18.4
-media-libs/gstreamer-1.18.4
+media-libs/gstreamer-1.20.2
 media-libs/harfbuzz-3.2.0
 media-libs/imlib2-1.7.1-r2
 media-libs/jbig2dec-0.19
@@ -665,7 +708,9 @@ media-libs/lcms-2.12
 media-libs/libaom-3.3.0
 media-libs/libass-0.15.2
 media-libs/libcanberra-0.30-r5
+media-libs/libdca-0.0.7
 media-libs/libde265-1.0.8
+media-libs/libdvbpsi-1.3.3
 media-libs/libepoxy-1.5.9-r1
 media-libs/libexif-0.6.24
 media-libs/libglvnd-1.4.0
@@ -675,6 +720,7 @@ media-libs/libjpeg-turbo-2.1.1-r2
 media-libs/libmad-0.15.1b-r10
 media-libs/libmng-2.0.3-r1
 media-libs/libmpdclient-2.20
+media-libs/libmpeg2-0.5.1-r3
 media-libs/libmypaint-1.6.1-r1
 media-libs/libnsgif-0.2.1-r3
 media-libs/libogg-1.3.5
@@ -691,6 +737,7 @@ media-libs/libwebp-1.2.2
 media-libs/libwmf-0.2.8.4-r9
 media-libs/mesa-21.3.7
 media-libs/openexr-3.1.4-r1
+media-libs/openh264-2.2.0
 media-libs/openjpeg-2.4.0
 media-libs/opus-1.3.1-r2
 media-libs/qhull-2020.2-r3
@@ -701,6 +748,8 @@ media-libs/webrtc-audio-processing-0.3.1
 media-libs/x264-0.0.20190903-r1
 media-libs/xvid-1.3.7
 media-plugins/alsa-plugins-1.2.2
+media-plugins/gst-plugins-libav-1.20.2
+media-plugins/gst-plugins-vaapi-1.20.2
 media-sound/alsa-utils-1.2.4
 media-sound/lame-3.100-r3
 media-sound/mpd-0.22.11
@@ -712,9 +761,12 @@ media-video/apple_facetimehd_firmware-1.43.0-r1
 media-video/ffmpeg-4.4.1-r3
 media-video/mpv-0.33.1-r2
 media-video/obs-studio-27.2.1
+media-video/uxplay-1.52
+media-video/vlc-3.0.16-r8
 net-analyzer/openbsd-netcat-1.195
 net-dialup/ppp-2.4.9-r5
 net-dialup/ppp-scripts-0
+net-dns/avahi-0.8-r5
 net-dns/bind-tools-9.16.27
 net-dns/c-ares-1.17.2
 net-dns/dnsmasq-2.85
@@ -722,6 +774,8 @@ net-dns/libidn-1.38-r1
 net-dns/libidn2-2.3.2
 net-firewall/ebtables-2.0.11-r3
 net-firewall/iptables-1.8.7
+net-firewall/ufw-0.36-r1
+net-fs/sshfs-3.7.1
 net-im/signal-desktop-bin-5.35.0
 net-irc/hexchat-2.16.0
 net-irc/weechat-3.4.1
@@ -765,7 +819,7 @@ net-vpn/networkmanager-openvpn-1.8.16
 net-vpn/nordvpn-3.11.0.1-r1
 net-vpn/openvpn-2.5.2-r2
 net-wireless/blueberry-1.4.6
-net-wireless/bluez-5.62-r3
+net-wireless/bluez-5.64
 net-wireless/bluez-tools-0_p20201025
 net-wireless/crda-4.14
 net-wireless/gnome-bluetooth-3.34.5
@@ -801,6 +855,7 @@ sys-apps/diffutils-3.8
 sys-apps/dmidecode-3.3
 sys-apps/dtc-1.6.0
 sys-apps/ed-1.17
+sys-apps/ethtool-5.15
 sys-apps/exa-0.10.1
 sys-apps/fastfetch-9999
 sys-apps/file-5.41
@@ -828,7 +883,9 @@ sys-apps/pciutils-3.7.0-r2
 sys-apps/pkgcore-0.12.10
 sys-apps/portage-3.0.30-r1
 sys-apps/sandbox-2.29
+sys-apps/sdparm-1.12
 sys-apps/sed-4.8
+sys-apps/sg3_utils-1.46-r1
 sys-apps/shadow-4.11.1
 sys-apps/systemd-tmpfiles-249.9
 sys-apps/sysvinit-2.99-r1
@@ -862,6 +919,7 @@ sys-devel/crossdev-20220205
 sys-devel/flex-2.6.4-r1
 sys-devel/gcc-11.2.1_p20220115
 sys-devel/gcc-config-2.5-r1
+sys-devel/gdb-11.2
 sys-devel/gettext-0.21-r1
 sys-devel/gnuconfig-20210107
 sys-devel/libtool-2.4.6-r6
@@ -911,6 +969,8 @@ sys-libs/readline-8.1_p2
 sys-libs/slang-2.3.2
 sys-libs/timezone-data-2021e
 sys-libs/zlib-1.2.11-r4
+sys-power/acpid-2.0.32-r2
+sys-power/acpitool-0.5.1-r2
 sys-process/htop-3.1.2-r1
 sys-process/lsof-4.94.0-r1
 sys-process/procps-3.3.17-r1
@@ -1000,6 +1060,8 @@ virtual/udev-217-r3
 virtual/w3m-1
 virtual/wine-0-r7
 virtual/yacc-0
+www-client/chromium-bin-102.0.5005.61-r1
+www-client/firefox-bin-101.0
 www-client/librewolf-bin-97.0.2
 www-client/qutebrowser-2.4.0
 www-client/w3m-0.5.3_p20210102
