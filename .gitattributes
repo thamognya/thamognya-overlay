@@ -1,0 +1,2 @@
+*.ebuild linguist-language=Rust
+*.eclass linguist-language=Python
