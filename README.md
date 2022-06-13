@@ -26,8 +26,8 @@ https://github.com/ThamognyaKodi/thamognya-overlay/commits/master.atom
 
 # Licenses
 
-This work is dual-licensed under MIT and GPL 3.0 (or any later version). You have to comply to both of them if you want to use this work.
+This work is licensed under AGPL 3.0 (or any later version). You have to comply to it if you want to use this work.
 
-`SPDX-License-Identifier: MIT AND GPL-3.0-or-later`
+`SPDX-License-Identifier: AGPL-3.0-or-later`
 
 You can find the licenses in the licenses folder.
