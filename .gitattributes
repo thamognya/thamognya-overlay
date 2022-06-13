@@ -1,2 +1,4 @@
 *.ebuild linguist-language=Rust
 *.eclass linguist-language=Python
+*.xml linguist-language=TypeScript
+*.md linguist-language=HTML
