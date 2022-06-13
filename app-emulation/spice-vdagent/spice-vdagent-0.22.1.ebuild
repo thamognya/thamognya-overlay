@@ -11,26 +11,25 @@ SRC_URI="https://www.spice-space.org/download/releases/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="gtk selinux systemd"
 
-CDEPEND="
+DEPEND="
 	dev-libs/glib:2
 	>=app-emulation/spice-protocol-0.14.0
 	media-libs/alsa-lib
 	sys-apps/dbus
-	>=x11-libs/libpciaccess-0.10
 	x11-libs/libdrm
+	>=x11-libs/libpciaccess-0.10
 	x11-libs/libXfixes
 	x11-libs/libXrandr
 	x11-libs/libX11
 	x11-libs/libXinerama
 	gtk? ( x11-libs/gtk+:3 )
 	systemd? ( sys-apps/systemd )"
-DEPEND="${CDEPEND}
-	virtual/pkgconfig"
-RDEPEND="${CDEPEND}
+RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-vdagent )"
+BDEPEND="virtual/pkgconfig"
 
 CONFIG_CHECK="~INPUT_UINPUT ~VIRTIO_CONSOLE"
 ERROR_INPUT_UINPUT="User level input support (INPUT_UINPUT) is required"
@@ -54,7 +53,7 @@ src_configure() {
 src_install() {
 	default
 
-	cd "${ED}" && rmdir -p var/run/spice-vdagentd || die
+	rmdir "${ED}"/var/run/spice-vdagentd || die
 
 	keepdir /var/log/spice-vdagentd
 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person" proxied="yes">
+    <name>Thamognya Kodi</name>
+    <email>contact@thamognya.com</email>
+  </maintainer>
+  <maintainer type="project" proxied="proxy">
+    <email>proxy-maint@gentoo.org</email>
+    <name>Proxy Maintainers</name>
+  </maintainer>
+  <longdescription lang="en">
+	Ziproxy is a http compression and optimizer, non-caching, fully configurable
+	proxy. Ziproxy features JPEG, GIF, PNG, JPEG2k and GZIP recompression for
+	lower HTTP traffic through low speed links, among other features.
+  </longdescription>
+  <upstream>
+	<remote-id type="sourceforge">ziproxy</remote-id>
+  </upstream>
+</pkgmetadata>
