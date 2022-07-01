@@ -33,6 +33,7 @@ acct-group/sshd-0-r1
 acct-group/tape-0-r1
 acct-group/tty-0-r1
 acct-group/video-0-r1
+acct-group/wwwoffle-0
 acct-user/avahi-0-r1
 acct-user/dnsmasq-0-r1
 acct-user/flatpak-0
@@ -49,6 +50,7 @@ acct-user/qemu-0-r1
 acct-user/radvd-0
 acct-user/rtkit-0-r1
 acct-user/sshd-0-r1
+acct-user/wwwoffle-0
 app-accessibility/at-spi2-atk-2.38.0
 app-accessibility/at-spi2-core-2.42.0
 app-admin/doas-6.8.2
@@ -89,8 +91,10 @@ app-crypt/p11-kit-0.23.22
 app-crypt/pinentry-1.2.0
 app-crypt/rhash-1.4.2
 app-doc/xmltoman-0.4-r1
+app-editors/hteditor-2.1.1_pre20161206
 app-editors/nano-5.9
 app-editors/neovim-0.7.0
+app-editors/qhexedit2-0.8.6_p20190316
 app-editors/vim-8.2.4328-r1
 app-editors/vim-core-8.2.4328-r1
 app-editors/vscode-1.67.2
@@ -113,6 +117,7 @@ app-eselect/eselect-ctags-1.19
 app-eselect/eselect-emacs-1.19
 app-eselect/eselect-fontconfig-1.1-r1
 app-eselect/eselect-iptables-20211203
+app-eselect/eselect-java-0.4.3
 app-eselect/eselect-lib-bin-symlink-0.1.1-r1
 app-eselect/eselect-lua-4-r1
 app-eselect/eselect-mpg123-0.1-r1
@@ -126,6 +131,7 @@ app-eselect/eselect-wine-1.2.2
 app-eselect/eselect-wxwidgets-20180529
 app-i18n/uchardet-0.0.7
 app-laptop/laptop-mode-tools-1.74
+app-laptop/pommed-1.39-r2
 app-misc/c_rehash-1.7-r1
 app-misc/ca-certificates-20210119.3.66
 app-misc/cmatrix-2.0-r4
@@ -171,6 +177,7 @@ app-text/dvipsk-2021.1_p20210325-r1
 app-text/ghostscript-gpl-9.55.0-r1
 app-text/gnome-doc-utils-0.20.10-r2
 app-text/iso-codes-4.9.0
+app-text/jo-9999
 app-text/lcdf-typetools-2.108-r1
 app-text/lesspipe-1.91
 app-text/libpaper-1.1.28
@@ -204,12 +211,17 @@ app-text/zathura-ps-0.2.6
 app-vim/gentoo-syntax-0.20211208
 dev-cpp/atkmm-2.28.2
 dev-cpp/cairomm-1.14.3
+dev-cpp/eigen-3.4.0-r1
 dev-cpp/glibmm-2.66.2
 dev-cpp/gtkmm-3.24.5
 dev-cpp/gtkmm-2.24.5-r1
 dev-cpp/pangomm-2.46.2
 dev-db/sqlite-3.37.2
 dev-go/go-md2man-2.0.0
+dev-java/java-config-2.3.1
+dev-java/openjdk-17.0.3_p7
+dev-java/openjdk-bin-17.0.3_p7
+dev-java/openjdk-bin-11.0.15_p10
 dev-lang/go-1.17.8
 dev-lang/lua-5.4.2-r1
 dev-lang/lua-5.1.5-r106
@@ -231,12 +243,14 @@ dev-lang/sassc-3.6.2
 dev-lang/spidermonkey-78.15.0
 dev-lang/swig-4.0.2
 dev-lang/tcl-8.6.12
+dev-lang/tk-8.6.12
 dev-lang/vala-0.52.10
 dev-lang/yasm-1.3.0-r1
 dev-libs/appstream-glib-0.7.18-r1
 dev-libs/atk-2.36.0
 dev-libs/boehm-gc-8.0.6
 dev-libs/boost-1.78.0-r2
+dev-libs/confuse-3.3
 dev-libs/dbus-glib-0.112
 dev-libs/double-conversion-3.2.0
 dev-libs/elfutils-0.186
@@ -257,6 +271,7 @@ dev-libs/json-glib-1.6.6-r1
 dev-libs/jsoncpp-1.9.5
 dev-libs/kpathsea-6.3.3_p20210325
 dev-libs/libaio-0.3.112
+dev-libs/libappindicator-12.10.1_p20200706
 dev-libs/libassuan-2.5.5
 dev-libs/libatasmart-0.19_p5
 dev-libs/libatomic_ops-7.6.12
@@ -351,7 +366,6 @@ dev-ml/opam-format-2.0.9
 dev-ml/opam-installer-2.0.9
 dev-ml/parmap-1.2.3
 dev-ml/re-1.9.0
-dev-ml/react-1.2.2
 dev-ml/result-1.5
 dev-ml/seq-0.2.2
 dev-ml/stdlib-shims-0.3.0
@@ -621,6 +635,7 @@ dev-texlive/texlive-pictures-2021
 dev-texlive/texlive-plaingeneric-2021
 dev-texlive/texlive-pstricks-2021
 dev-texlive/texlive-xetex-2021-r1
+dev-util/android-studio-2021.2.1.14
 dev-util/astyle-3.1-r2
 dev-util/boost-build-1.78.0-r1
 dev-util/cmake-3.22.2
@@ -662,6 +677,7 @@ mail-client/thunderbird-bin-91.7.0
 mail-mta/nullmailer-2.2-r2
 media-fonts/dejavu-2.37
 media-fonts/encodings-1.0.5-r1
+media-fonts/fira-code-5.2
 media-fonts/font-util-1.3.2-r1
 media-fonts/fontawesome-5.15.3
 media-fonts/liberation-fonts-2.1.3
@@ -759,11 +775,13 @@ media-sound/pavucontrol-5.0-r1
 media-sound/pulseaudio-15.0-r2
 media-video/apple_facetimehd_firmware-1.43.0-r1
 media-video/ffmpeg-4.4.1-r3
+media-video/ffmpeg-chromium-102
 media-video/mpv-0.33.1-r2
 media-video/obs-studio-27.2.1
 media-video/uxplay-1.52
 media-video/vlc-3.0.16-r8
 net-analyzer/openbsd-netcat-1.195
+net-analyzer/rrdtool-1.8.0
 net-dialup/ppp-2.4.9-r5
 net-dialup/ppp-scripts-0
 net-dns/avahi-0.8-r5
@@ -776,6 +794,7 @@ net-firewall/ebtables-2.0.11-r3
 net-firewall/iptables-1.8.7
 net-firewall/ufw-0.36-r1
 net-fs/sshfs-3.7.1
+net-im/discord-canary-bin-0.0.135
 net-im/signal-desktop-bin-5.35.0
 net-irc/hexchat-2.16.0
 net-irc/weechat-3.4.1
@@ -795,8 +814,10 @@ net-libs/libpsl-0.21.0
 net-libs/libqmi-1.30.4
 net-libs/libslirp-4.6.1
 net-libs/libsoup-2.74.2
+net-libs/libssh-0.9.6
 net-libs/libssh2-1.10.0
 net-libs/libtirpc-1.3.2
+net-libs/libvncserver-0.9.13
 net-libs/mbedtls-2.28.0-r1
 net-libs/nghttp2-1.45.1-r1
 net-libs/nodejs-16.14.2
@@ -810,9 +831,12 @@ net-misc/netifrc-0.7.3
 net-misc/networkmanager-1.32.12-r1
 net-misc/openssh-8.8_p1-r4
 net-misc/radvd-2.19-r2
+net-misc/remmina-1.4.25
 net-misc/rsync-3.2.3-r5
 net-misc/spice-gtk-0.39-r2
+net-misc/tigervnc-1.12.0-r5
 net-misc/wget-1.21.2
+net-news/sfeed-1.5
 net-print/cups-2.3.3_p2-r3
 net-print/cups-filters-1.28.10-r3
 net-vpn/networkmanager-openvpn-1.8.16
@@ -829,6 +853,8 @@ perl-core/CPAN-2.290.0-r1
 perl-core/Encode-3.120.0
 perl-core/File-Temp-0.231.100
 perl-core/Scalar-List-Utils-1.560.0
+sci-astronomy/erfa-1.4.0
+sci-astronomy/pal-0.9.8
 sci-libs/amd-2.4.6-r1
 sci-libs/arpack-3.8.0
 sci-libs/camd-2.4.6-r1
@@ -842,11 +868,13 @@ sci-libs/qrupdate-1.1.2-r2
 sci-libs/suitesparseconfig-5.4.0
 sci-libs/umfpack-5.7.9
 sci-mathematics/glpk-5.0-r1
+sci-physics/yoda-1.9.5
 sci-visualization/gnuplot-5.4.3
 sec-keys/openpgp-keys-gentoo-release-20220101
 sys-apps/acl-2.3.1
 sys-apps/attr-2.5.1
 sys-apps/baselayout-2.7-r3
+sys-apps/baselayout-java-0.1.0-r1
 sys-apps/bubblewrap-0.5.0
 sys-apps/coreutils-8.32-r1
 sys-apps/dbus-1.12.20-r4
@@ -964,6 +992,7 @@ sys-libs/liburing-2.1-r1
 sys-libs/libxcrypt-4.4.27
 sys-libs/mtdev-1.1.6
 sys-libs/ncurses-6.2_p20210619
+sys-libs/ncurses-compat-6.2
 sys-libs/pam-1.5.1_p20210622-r1
 sys-libs/readline-8.1_p2
 sys-libs/slang-2.3.2
@@ -984,7 +1013,9 @@ virtual/editor-0-r3
 virtual/fortran-0
 virtual/freedesktop-icon-theme-0-r4
 virtual/glu-9.0-r2
+virtual/jdk-11-r2
 virtual/jpeg-100
+virtual/jre-11-r2
 virtual/lapack-3.10
 virtual/latex-base-1.0
 virtual/libc-1-r1
@@ -1064,7 +1095,9 @@ www-client/chromium-bin-102.0.5005.61-r1
 www-client/firefox-bin-101.0
 www-client/librewolf-bin-97.0.2
 www-client/qutebrowser-2.4.0
+www-client/vivaldi-snapshot-5.3.2679.50
 www-client/w3m-0.5.3_p20210102
+www-plugins/chrome-binary-plugins-102.0.5005.115
 x11-apps/iceauth-1.0.8-r1
 x11-apps/mkfontscale-1.2.1
 x11-apps/rgb-1.0.6-r1
@@ -1077,6 +1110,7 @@ x11-apps/xprop-1.2.5
 x11-apps/xrandr-1.5.1
 x11-apps/xrdb-1.2.1
 x11-apps/xset-1.2.4-r1
+x11-apps/xsetroot-1.1.2-r1
 x11-base/xcb-proto-1.14.1
 x11-base/xorg-drivers-21.1
 x11-base/xorg-proto-2021.5
@@ -1136,7 +1170,7 @@ x11-libs/pango-1.50.4
 x11-libs/pixman-0.40.0
 x11-libs/qscintilla-2.11.6
 x11-libs/startup-notification-0.12-r1
-x11-libs/vte-0.66.2
+x11-libs/vte-0.68.0
 x11-libs/wxGTK-3.0.4-r302
 x11-libs/xapp-2.2.4
 x11-libs/xcb-util-0.4.0-r2
@@ -1163,6 +1197,11 @@ x11-misc/xdg-user-dirs-0.17
 x11-misc/xdg-user-dirs-gtk-0.10-r1
 x11-misc/xdg-utils-1.1.3_p20200220-r5
 x11-misc/xkeyboard-config-2.34
+x11-terms/alacritty-0.9.0-r1
+x11-terms/kitty-0.25.1
+x11-terms/kitty-shell-integration-0.25.1
+x11-terms/kitty-terminfo-0.25.1
+x11-terms/roxterm-9999
 x11-themes/adwaita-icon-theme-41.0
 x11-themes/hicolor-icon-theme-0.17
 x11-themes/sound-theme-freedesktop-0.8

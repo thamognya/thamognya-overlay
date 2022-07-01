@@ -1049,6 +1049,7 @@ net-p2p/ctorrent-3.3.2-r4
 net-p2p/ed2k_hash-0.4.0-r2
 net-p2p/gtorrentviewer-0.2b-r1
 net-p2p/ncdc-1.22.1-r1
+net-p2p/opendchub-0.8.2-r1
 net-print/cndrvcups-common-lb-3.70
 net-print/cndrvcups-lb-3.70
 net-print/cnrdrvcups-lb-5.40
