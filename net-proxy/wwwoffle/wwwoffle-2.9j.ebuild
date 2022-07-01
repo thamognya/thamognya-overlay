@@ -1,7 +1,7 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 DESCRIPTION="Web caching proxy suitable for non-permanent Internet connections"
 HOMEPAGE="https://www.gedanken.org.uk/software/wwwoffle/"
