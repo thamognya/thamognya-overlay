@@ -7,8 +7,15 @@ inherit fcaps go-module tmpfiles systemd flag-o-matic
 
 DESCRIPTION="A painless self-hosted Git service"
 HOMEPAGE="https://gitea.io https://github.com/go-gitea/gitea"
-SRC_URI="https://github.com/go-gitea/gitea/releases/download/v${PV}/gitea-src-${PV}.tar.gz -> ${P}.tar.gz"
-KEYWORDS="amd64 ~arm ~arm64 ~x86"
+
+if [[ ${PV} == *9999 ]]; then
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/go-gitea/gitea.git"
+else
+	SRC_URI="https://github.com/go-gitea/gitea/releases/download/v${PV}/gitea-src-${PV}.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="amd64 ~arm ~arm64 ~x86"
+fi
+
 S="${WORKDIR}"
 
 LICENSE="Apache-2.0 BSD BSD-2 ISC MIT MPL-2.0"
